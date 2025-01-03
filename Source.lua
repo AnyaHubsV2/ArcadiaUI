@@ -19,6 +19,7 @@ UI["2"]["Size"] = UDim2.new(0, 28, 0, 27)
 UI["2"]["Name"] = [[open]]
 UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["2"]["Position"] = UDim2.new(0.51234, 0, 0.05628, 0)
+UI["2"]["ImageTransparency"] = 0
 
 -- // StarterGui.Arcadia.open.UICorner \\ --
 UI["3"] = Instance.new("UICorner", UI["2"])
