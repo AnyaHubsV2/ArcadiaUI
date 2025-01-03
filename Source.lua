@@ -3413,14 +3413,14 @@ local script = UI["4"]
 
 	--executor load
 	exeframe.Executor.Execute.MouseButton1Click:Connect(function()
-		dtc.schedule(exeframe.Executor.txtbox.TextBox.Text)()
+		dtc.schedule(exeframe.Executor.txtbox.EditorFrame.Source.Text)()
 	end)
 	--clear
 	exeframe.Executor.Clear.MouseButton1Click:Connect(function()
-		exeframe.Executor.txtbox.TextBox.Text = ""
+		exeframe.Executor.txtbox.EditorFrame.Source.Text = ""
 	end)
 	exeframe.Executor.Copy.MouseButton1Click:Connect(function()
-		setclipboard(exeframe.Executor.txtbox.TextBox.Text)
+		setclipboard(exeframe.Executor.txtbox.EditorFrame.Source.Text)
 	end)
 
 	--search script
