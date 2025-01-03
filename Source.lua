@@ -1,316 +1,277 @@
---[=[
- d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
-88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
-88      88    88    88            odD'      88      88    88 88ooo88 
-88  ooo 88    88    88          .88'        88      88    88 88~~~88 
-88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
- Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
-]=]
-
--- Instances: 153 | Scripts: 2 | Modules: 6 | Tags: 0
-local G2L = {};
-
--- StarterGui.Arcadia
-G2L["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
-G2L["1"]["DisplayOrder"] = 999999999;
-G2L["1"]["Name"] = [[Arcadia]];
-G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-
-
--- StarterGui.Arcadia.open
-G2L["2"] = Instance.new("ImageButton", G2L["1"]);
-G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["ImageTransparency"] = 1;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2"]["Image"] = [[rbxassetid://15204016915]];
-G2L["2"]["Size"] = UDim2.new(0, 28, 0, 27);
-G2L["2"]["BackgroundTransparency"] = 0.99;
-G2L["2"]["Name"] = [[open]];
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Position"] = UDim2.new(0.51234, 0, 0.05628, 0);
-
-
--- StarterGui.Arcadia.open.UICorner
-G2L["3"] = Instance.new("UICorner", G2L["2"]);
-
-
-
--- StarterGui.Arcadia.LocalScript
-G2L["4"] = Instance.new("LocalScript", G2L["1"]);
-
-
-
--- StarterGui.Arcadia.LocalScript.Highlighter
-G2L["5"] = Instance.new("ModuleScript", G2L["4"]);
-G2L["5"]["Name"] = [[Highlighter]];
-
-
--- StarterGui.Arcadia.LocalScript.Highlighter.lexer
-G2L["6"] = Instance.new("ModuleScript", G2L["5"]);
-G2L["6"]["Name"] = [[lexer]];
-
-
--- StarterGui.Arcadia.LocalScript.Highlighter.lexer.language
-G2L["7"] = Instance.new("ModuleScript", G2L["6"]);
-G2L["7"]["Name"] = [[language]];
-
-
--- StarterGui.Arcadia.LocalScript.Highlighter.theme
-G2L["8"] = Instance.new("ModuleScript", G2L["5"]);
-G2L["8"]["Name"] = [[theme]];
-
-
--- StarterGui.Arcadia.LocalScript.Highlighter.types
-G2L["9"] = Instance.new("ModuleScript", G2L["5"]);
-G2L["9"]["Name"] = [[types]];
-
-
--- StarterGui.Arcadia.LocalScript.Highlighter.utility
-G2L["a"] = Instance.new("ModuleScript", G2L["5"]);
-G2L["a"]["Name"] = [[utility]];
-
-
--- StarterGui.Arcadia.MAIN
-G2L["b"] = Instance.new("Frame", G2L["1"]);
-G2L["b"]["BorderSizePixel"] = 0;
-G2L["b"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
-G2L["b"]["Size"] = UDim2.new(0.52916, 0, 0.625, 0);
-G2L["b"]["Position"] = UDim2.new(0.25913, 0, 0.22191, 0);
-G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Name"] = [[MAIN]];
-
-
--- StarterGui.Arcadia.MAIN.topbar
-G2L["c"] = Instance.new("Frame", G2L["b"]);
-G2L["c"]["BorderSizePixel"] = 0;
-G2L["c"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["c"]["Size"] = UDim2.new(1, 0, 0.10235, 0);
-G2L["c"]["Position"] = UDim2.new(0, 0, 0.00923, 0);
-G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c"]["Name"] = [[topbar]];
-
-
--- StarterGui.Arcadia.MAIN.topbar.UICorner
-G2L["d"] = Instance.new("UICorner", G2L["c"]);
-G2L["d"]["CornerRadius"] = UDim.new(0, 5);
-
-
--- StarterGui.Arcadia.MAIN.topbar.scriptsbutton
-G2L["e"] = Instance.new("TextButton", G2L["c"]);
-G2L["e"]["TextWrapped"] = true;
-G2L["e"]["BorderSizePixel"] = 0;
-G2L["e"]["TextSize"] = 20;
-G2L["e"]["TextColor3"] = Color3.fromRGB(133, 132, 133);
-G2L["e"]["TextScaled"] = true;
-G2L["e"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["e"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Medium, Enum.FontStyle.Normal);
-G2L["e"]["Size"] = UDim2.new(0.07389, 0, 0.84848, 0);
-G2L["e"]["Name"] = [[scriptsbutton]];
-G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e"]["Text"] = [[Scripts]];
-G2L["e"]["Position"] = UDim2.new(0.46237, 0, 0.09091, 0);
-
-
--- StarterGui.Arcadia.MAIN.topbar.scriptsbutton.UITextSizeConstraint
-G2L["f"] = Instance.new("UITextSizeConstraint", G2L["e"]);
-G2L["f"]["MaxTextSize"] = 25;
-
-
--- StarterGui.Arcadia.MAIN.topbar.executorbutton
-G2L["10"] = Instance.new("TextButton", G2L["c"]);
-G2L["10"]["TextWrapped"] = true;
-G2L["10"]["TextStrokeTransparency"] = 0;
-G2L["10"]["BorderSizePixel"] = 0;
-G2L["10"]["TextSize"] = 25;
-G2L["10"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["10"]["TextScaled"] = true;
-G2L["10"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["10"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["10"]["Size"] = UDim2.new(0.07389, 0, 0.84848, 0);
-G2L["10"]["Name"] = [[executorbutton]];
-G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10"]["Text"] = [[Executor]];
-G2L["10"]["Position"] = UDim2.new(0.34859, 0, 0.09091, 0);
-
-
--- StarterGui.Arcadia.MAIN.topbar.executorbutton.UITextSizeConstraint
-G2L["11"] = Instance.new("UITextSizeConstraint", G2L["10"]);
-G2L["11"]["MaxTextSize"] = 22;
-
-
--- StarterGui.Arcadia.MAIN.topbar.close
-G2L["12"] = Instance.new("ImageButton", G2L["c"]);
-G2L["12"]["BorderSizePixel"] = 0;
-G2L["12"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["12"]["Image"] = [[rbxassetid://15115278951]];
-G2L["12"]["Size"] = UDim2.new(0.04105, 0, 0.72727, 0);
-G2L["12"]["BackgroundTransparency"] = 1;
-G2L["12"]["Name"] = [[close]];
-G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["Position"] = UDim2.new(0.95244, 0, 0.09091, 0);
-
-
--- StarterGui.Arcadia.MAIN.topbar.gg9
-G2L["13"] = Instance.new("ImageLabel", G2L["c"]);
-G2L["13"]["BorderSizePixel"] = 0;
-G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["13"]["Image"] = [[rbxassetid://99871944680832]];
-G2L["13"]["Size"] = UDim2.new(0.054, 0, 1, 0);
-G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13"]["BackgroundTransparency"] = 1;
-G2L["13"]["Name"] = [[gg9]];
-G2L["13"]["Position"] = UDim2.new(0.00577, 0, -0.0234, 0);
-
-
--- StarterGui.Arcadia.MAIN.topbar.gg9.UICorner
-G2L["14"] = Instance.new("UICorner", G2L["13"]);
-
-
-
--- StarterGui.Arcadia.MAIN.topbar.TextLabel
-G2L["15"] = Instance.new("TextLabel", G2L["c"]);
-G2L["15"]["TextWrapped"] = true;
-G2L["15"]["BorderSizePixel"] = 0;
-G2L["15"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["15"]["TextScaled"] = true;
-G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["15"]["TextSize"] = 30;
-G2L["15"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["15"]["BackgroundTransparency"] = 1;
-G2L["15"]["Size"] = UDim2.new(0.16155, 0, 0.81818, 0);
-G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["15"]["Text"] = [[Arcadia]];
-G2L["15"]["Position"] = UDim2.new(0.05263, 0, 0.03126, 0);
-
-
--- StarterGui.Arcadia.MAIN.topbar.TextLabel.UITextSizeConstraint
-G2L["16"] = Instance.new("UITextSizeConstraint", G2L["15"]);
-G2L["16"]["MaxTextSize"] = 30;
-
-
--- StarterGui.Arcadia.MAIN.topbar.UIAspectRatioConstraint
-G2L["17"] = Instance.new("UIAspectRatioConstraint", G2L["c"]);
-G2L["17"]["AspectRatio"] = 18.6772;
-
-
--- StarterGui.Arcadia.MAIN.topbar.settingsbutton
-G2L["18"] = Instance.new("TextButton", G2L["c"]);
-G2L["18"]["TextWrapped"] = true;
-G2L["18"]["BorderSizePixel"] = 0;
-G2L["18"]["TextSize"] = 25;
-G2L["18"]["TextColor3"] = Color3.fromRGB(133, 132, 133);
-G2L["18"]["TextScaled"] = true;
-G2L["18"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["18"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
-G2L["18"]["Size"] = UDim2.new(0.07389, 0, 0.84848, 0);
-G2L["18"]["Name"] = [[settingsbutton]];
-G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["Text"] = [[Settings]];
-G2L["18"]["Position"] = UDim2.new(0.57247, 0, 0.09091, 0);
-
-
--- StarterGui.Arcadia.MAIN.topbar.settingsbutton.UITextSizeConstraint
-G2L["19"] = Instance.new("UITextSizeConstraint", G2L["18"]);
-G2L["19"]["MaxTextSize"] = 22;
-
-
--- StarterGui.Arcadia.MAIN.frames
-G2L["1a"] = Instance.new("Frame", G2L["b"]);
-G2L["1a"]["BorderSizePixel"] = 0;
-G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
-G2L["1a"]["Size"] = UDim2.new(1, 0, 0.88923, 0);
-G2L["1a"]["Position"] = UDim2.new(0, 0, 0.10963, 0);
-G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1a"]["Name"] = [[frames]];
-
-
--- StarterGui.Arcadia.MAIN.frames.UICorner
-G2L["1b"] = Instance.new("UICorner", G2L["1a"]);
-
-
-
--- StarterGui.Arcadia.MAIN.frames.executor
-G2L["1c"] = Instance.new("Frame", G2L["1a"]);
-G2L["1c"]["BorderSizePixel"] = 0;
-G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["1c"]["Size"] = UDim2.new(1, 0, 1.00346, 0);
-G2L["1c"]["Position"] = UDim2.new(0, 0, -0.00231, 0);
-G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1c"]["Name"] = [[executor]];
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.UICorner
-G2L["1d"] = Instance.new("UICorner", G2L["1c"]);
-
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor
-G2L["1e"] = Instance.new("Frame", G2L["1c"]);
-G2L["1e"]["BorderSizePixel"] = 0;
-G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(32, 34, 39);
-G2L["1e"]["Size"] = UDim2.new(1.08189, 0, 1.0312, 0);
-G2L["1e"]["Position"] = UDim2.new(-0.0884, 0, -0.06326, 0);
-G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1e"]["Name"] = [[Executor]];
-G2L["1e"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.UICorner
-G2L["1f"] = Instance.new("UICorner", G2L["1e"]);
-G2L["1f"]["CornerRadius"] = UDim.new(0.06, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox
-G2L["20"] = Instance.new("Frame", G2L["1e"]);
-G2L["20"]["BorderSizePixel"] = 0;
-G2L["20"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["20"]["Size"] = UDim2.new(0.87884, 0, 0.85558, 0);
-G2L["20"]["Position"] = UDim2.new(0.10641, 0, 0.12261, 0);
-G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["20"]["Name"] = [[txtbox]];
-G2L["20"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame
-G2L["21"] = Instance.new("ScrollingFrame", G2L["20"]);
-G2L["21"]["ElasticBehavior"] = Enum.ElasticBehavior.Always;
-G2L["21"]["TopImage"] = [[rbxassetid://148970562]];
-G2L["21"]["MidImage"] = [[rbxassetid://148970562]];
-G2L["21"]["VerticalScrollBarInset"] = Enum.ScrollBarInset.Always;
-G2L["21"]["BackgroundColor3"] = Color3.fromRGB(32, 31, 32);
-G2L["21"]["Name"] = [[EditorFrame]];
-G2L["21"]["HorizontalScrollBarInset"] = Enum.ScrollBarInset.Always;
-G2L["21"]["BottomImage"] = [[rbxassetid://148970562]];
-G2L["21"]["Size"] = UDim2.new(0.99667, 0, 0.79219, 0);
-G2L["21"]["ScrollBarImageColor3"] = Color3.fromRGB(38, 40, 46);
-G2L["21"]["Position"] = UDim2.new(0.00333, 0, 0.0262, 0);
-G2L["21"]["BorderColor3"] = Color3.fromRGB(62, 62, 62);
-G2L["21"]["ScrollBarThickness"] = 10;
-G2L["21"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame.Source
-G2L["22"] = Instance.new("TextBox", G2L["21"]);
-G2L["22"]["CursorPosition"] = -1;
-G2L["22"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["22"]["PlaceholderColor3"] = Color3.fromRGB(205, 205, 205);
-G2L["22"]["ZIndex"] = 3;
-G2L["22"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["22"]["TextSize"] = 13;
-G2L["22"]["Name"] = [[Source]];
-G2L["22"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["22"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
-G2L["22"]["RichText"] = true;
-G2L["22"]["MultiLine"] = true;
-G2L["22"]["ClearTextOnFocus"] = false;
-G2L["22"]["ClipsDescendants"] = true;
-G2L["22"]["Size"] = UDim2.new(0.93, 0, 2, 0);
-G2L["22"]["Position"] = UDim2.new(0.055, 0, 0.005, 0);
-G2L["22"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["22"]["Text"] = [[if IY_LOADED and not _G.IY_DEBUG == true then
+-- // GUI TO LUA \\ --
+
+-- // INSTANCES: 153 | SCRIPTS: 2 | MODULES: 6 \\ --
+
+local UI = {}
+
+-- // StarterGui.Arcadia \\ --
+UI["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"))
+UI["1"]["DisplayOrder"] = 999999999
+UI["1"]["Name"] = [[Arcadia]]
+UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+
+-- // StarterGui.Arcadia.open \\ --
+UI["2"] = Instance.new("ImageButton", UI["1"])
+UI["2"]["BorderSizePixel"] = 0
+UI["2"]["ImageTransparency"] = 1
+UI["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2"]["Image"] = [[rbxassetid://15204016915]]
+UI["2"]["Size"] = UDim2.new(0, 28, 0, 27)
+UI["2"]["BackgroundTransparency"] = 0.99
+UI["2"]["Name"] = [[open]]
+UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2"]["Position"] = UDim2.new(0.51234, 0, 0.05628, 0)
+
+-- // StarterGui.Arcadia.open.UICorner \\ --
+UI["3"] = Instance.new("UICorner", UI["2"])
+
+
+-- // StarterGui.Arcadia.LocalScript \\ --
+UI["4"] = Instance.new("LocalScript", UI["1"])
+
+
+-- // StarterGui.Arcadia.LocalScript.Highlighter \\ --
+UI["5"] = Instance.new("ModuleScript", UI["4"])
+UI["5"]["Name"] = [[Highlighter]]
+
+-- // StarterGui.Arcadia.LocalScript.Highlighter.lexer \\ --
+UI["6"] = Instance.new("ModuleScript", UI["5"])
+UI["6"]["Name"] = [[lexer]]
+
+-- // StarterGui.Arcadia.LocalScript.Highlighter.lexer.language \\ --
+UI["7"] = Instance.new("ModuleScript", UI["6"])
+UI["7"]["Name"] = [[language]]
+
+-- // StarterGui.Arcadia.LocalScript.Highlighter.theme \\ --
+UI["8"] = Instance.new("ModuleScript", UI["5"])
+UI["8"]["Name"] = [[theme]]
+
+-- // StarterGui.Arcadia.LocalScript.Highlighter.types \\ --
+UI["9"] = Instance.new("ModuleScript", UI["5"])
+UI["9"]["Name"] = [[types]]
+
+-- // StarterGui.Arcadia.LocalScript.Highlighter.utility \\ --
+UI["a"] = Instance.new("ModuleScript", UI["5"])
+UI["a"]["Name"] = [[utility]]
+
+-- // StarterGui.Arcadia.MAIN \\ --
+UI["b"] = Instance.new("Frame", UI["1"])
+UI["b"]["BorderSizePixel"] = 0
+UI["b"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17)
+UI["b"]["Size"] = UDim2.new(0.52916, 0, 0.625, 0)
+UI["b"]["Position"] = UDim2.new(0.25913, 0, 0.22191, 0)
+UI["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["b"]["Name"] = [[MAIN]]
+
+-- // StarterGui.Arcadia.MAIN.topbar \\ --
+UI["c"] = Instance.new("Frame", UI["b"])
+UI["c"]["BorderSizePixel"] = 0
+UI["c"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["c"]["Size"] = UDim2.new(1, 0, 0.10235, 0)
+UI["c"]["Position"] = UDim2.new(0, 0, 0.00923, 0)
+UI["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["c"]["Name"] = [[topbar]]
+
+-- // StarterGui.Arcadia.MAIN.topbar.UICorner \\ --
+UI["d"] = Instance.new("UICorner", UI["c"])
+UI["d"]["CornerRadius"] = UDim.new(0, 5)
+
+-- // StarterGui.Arcadia.MAIN.topbar.scriptsbutton \\ --
+UI["e"] = Instance.new("TextButton", UI["c"])
+UI["e"]["TextWrapped"] = true
+UI["e"]["BorderSizePixel"] = 0
+UI["e"]["TextSize"] = 20
+UI["e"]["TextColor3"] = Color3.fromRGB(133, 132, 133)
+UI["e"]["TextScaled"] = true
+UI["e"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["e"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Medium, Enum.FontStyle.Normal)
+UI["e"]["Size"] = UDim2.new(0.07389, 0, 0.84848, 0)
+UI["e"]["Name"] = [[scriptsbutton]]
+UI["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["e"]["Text"] = [[Scripts]]
+UI["e"]["Position"] = UDim2.new(0.46237, 0, 0.09091, 0)
+
+-- // StarterGui.Arcadia.MAIN.topbar.scriptsbutton.UITextSizeConstraint \\ --
+UI["f"] = Instance.new("UITextSizeConstraint", UI["e"])
+UI["f"]["MaxTextSize"] = 25
+
+-- // StarterGui.Arcadia.MAIN.topbar.executorbutton \\ --
+UI["10"] = Instance.new("TextButton", UI["c"])
+UI["10"]["TextWrapped"] = true
+UI["10"]["TextStrokeTransparency"] = 0
+UI["10"]["BorderSizePixel"] = 0
+UI["10"]["TextSize"] = 25
+UI["10"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["10"]["TextScaled"] = true
+UI["10"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["10"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["10"]["Size"] = UDim2.new(0.07389, 0, 0.84848, 0)
+UI["10"]["Name"] = [[executorbutton]]
+UI["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["10"]["Text"] = [[Executor]]
+UI["10"]["Position"] = UDim2.new(0.34859, 0, 0.09091, 0)
+
+-- // StarterGui.Arcadia.MAIN.topbar.executorbutton.UITextSizeConstraint \\ --
+UI["11"] = Instance.new("UITextSizeConstraint", UI["10"])
+UI["11"]["MaxTextSize"] = 22
+
+-- // StarterGui.Arcadia.MAIN.topbar.close \\ --
+UI["12"] = Instance.new("ImageButton", UI["c"])
+UI["12"]["BorderSizePixel"] = 0
+UI["12"]["ScaleType"] = Enum.ScaleType.Fit
+UI["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["12"]["Image"] = [[rbxassetid://15115278951]]
+UI["12"]["Size"] = UDim2.new(0.04105, 0, 0.72727, 0)
+UI["12"]["BackgroundTransparency"] = 1
+UI["12"]["Name"] = [[close]]
+UI["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["12"]["Position"] = UDim2.new(0.95244, 0, 0.09091, 0)
+
+-- // StarterGui.Arcadia.MAIN.topbar.gg9 \\ --
+UI["13"] = Instance.new("ImageLabel", UI["c"])
+UI["13"]["BorderSizePixel"] = 0
+UI["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["13"]["Image"] = [[rbxassetid://99871944680832]]
+UI["13"]["Size"] = UDim2.new(0.054, 0, 1, 0)
+UI["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["13"]["BackgroundTransparency"] = 1
+UI["13"]["Name"] = [[gg9]]
+UI["13"]["Position"] = UDim2.new(0.00577, 0, -0.0234, 0)
+
+-- // StarterGui.Arcadia.MAIN.topbar.gg9.UICorner \\ --
+UI["14"] = Instance.new("UICorner", UI["13"])
+
+
+-- // StarterGui.Arcadia.MAIN.topbar.TextLabel \\ --
+UI["15"] = Instance.new("TextLabel", UI["c"])
+UI["15"]["TextWrapped"] = true
+UI["15"]["BorderSizePixel"] = 0
+UI["15"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["15"]["TextScaled"] = true
+UI["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["15"]["TextSize"] = 30
+UI["15"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["15"]["BackgroundTransparency"] = 1
+UI["15"]["Size"] = UDim2.new(0.16155, 0, 0.81818, 0)
+UI["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["15"]["Text"] = [[Arcadia]]
+UI["15"]["Position"] = UDim2.new(0.05263, 0, 0.03126, 0)
+
+-- // StarterGui.Arcadia.MAIN.topbar.TextLabel.UITextSizeConstraint \\ --
+UI["16"] = Instance.new("UITextSizeConstraint", UI["15"])
+UI["16"]["MaxTextSize"] = 30
+
+-- // StarterGui.Arcadia.MAIN.topbar.UIAspectRatioConstraint \\ --
+UI["17"] = Instance.new("UIAspectRatioConstraint", UI["c"])
+UI["17"]["AspectRatio"] = 18.6772
+
+-- // StarterGui.Arcadia.MAIN.topbar.settingsbutton \\ --
+UI["18"] = Instance.new("TextButton", UI["c"])
+UI["18"]["TextWrapped"] = true
+UI["18"]["BorderSizePixel"] = 0
+UI["18"]["TextSize"] = 25
+UI["18"]["TextColor3"] = Color3.fromRGB(133, 132, 133)
+UI["18"]["TextScaled"] = true
+UI["18"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["18"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal)
+UI["18"]["Size"] = UDim2.new(0.07389, 0, 0.84848, 0)
+UI["18"]["Name"] = [[settingsbutton]]
+UI["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["18"]["Text"] = [[Settings]]
+UI["18"]["Position"] = UDim2.new(0.57247, 0, 0.09091, 0)
+
+-- // StarterGui.Arcadia.MAIN.topbar.settingsbutton.UITextSizeConstraint \\ --
+UI["19"] = Instance.new("UITextSizeConstraint", UI["18"])
+UI["19"]["MaxTextSize"] = 22
+
+-- // StarterGui.Arcadia.MAIN.frames \\ --
+UI["1a"] = Instance.new("Frame", UI["b"])
+UI["1a"]["BorderSizePixel"] = 0
+UI["1a"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17)
+UI["1a"]["Size"] = UDim2.new(1, 0, 0.88923, 0)
+UI["1a"]["Position"] = UDim2.new(0, 0, 0.10963, 0)
+UI["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1a"]["Name"] = [[frames]]
+
+-- // StarterGui.Arcadia.MAIN.frames.UICorner \\ --
+UI["1b"] = Instance.new("UICorner", UI["1a"])
+
+
+-- // StarterGui.Arcadia.MAIN.frames.executor \\ --
+UI["1c"] = Instance.new("Frame", UI["1a"])
+UI["1c"]["BorderSizePixel"] = 0
+UI["1c"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["1c"]["Size"] = UDim2.new(1, 0, 1.00346, 0)
+UI["1c"]["Position"] = UDim2.new(0, 0, -0.00231, 0)
+UI["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1c"]["Name"] = [[executor]]
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.UICorner \\ --
+UI["1d"] = Instance.new("UICorner", UI["1c"])
+
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor \\ --
+UI["1e"] = Instance.new("Frame", UI["1c"])
+UI["1e"]["BorderSizePixel"] = 0
+UI["1e"]["BackgroundColor3"] = Color3.fromRGB(32, 34, 39)
+UI["1e"]["Size"] = UDim2.new(1.08189, 0, 1.0312, 0)
+UI["1e"]["Position"] = UDim2.new(-0.0884, 0, -0.06326, 0)
+UI["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1e"]["Name"] = [[Executor]]
+UI["1e"]["BackgroundTransparency"] = 1
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.UICorner \\ --
+UI["1f"] = Instance.new("UICorner", UI["1e"])
+UI["1f"]["CornerRadius"] = UDim.new(0.06, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox \\ --
+UI["20"] = Instance.new("Frame", UI["1e"])
+UI["20"]["BorderSizePixel"] = 0
+UI["20"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["20"]["Size"] = UDim2.new(0.87884, 0, 0.85558, 0)
+UI["20"]["Position"] = UDim2.new(0.10641, 0, 0.12261, 0)
+UI["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["20"]["Name"] = [[txtbox]]
+UI["20"]["BackgroundTransparency"] = 1
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame \\ --
+UI["21"] = Instance.new("ScrollingFrame", UI["20"])
+UI["21"]["ElasticBehavior"] = Enum.ElasticBehavior.Always
+UI["21"]["TopImage"] = [[rbxassetid://148970562]]
+UI["21"]["MidImage"] = [[rbxassetid://148970562]]
+UI["21"]["VerticalScrollBarInset"] = Enum.ScrollBarInset.Always
+UI["21"]["BackgroundColor3"] = Color3.fromRGB(32, 31, 32)
+UI["21"]["Name"] = [[EditorFrame]]
+UI["21"]["HorizontalScrollBarInset"] = Enum.ScrollBarInset.Always
+UI["21"]["BottomImage"] = [[rbxassetid://148970562]]
+UI["21"]["Size"] = UDim2.new(0.99667, 0, 0.79219, 0)
+UI["21"]["ScrollBarImageColor3"] = Color3.fromRGB(38, 40, 46)
+UI["21"]["Position"] = UDim2.new(0.00333, 0, 0.0262, 0)
+UI["21"]["BorderColor3"] = Color3.fromRGB(62, 62, 62)
+UI["21"]["ScrollBarThickness"] = 10
+UI["21"]["BackgroundTransparency"] = 1
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame.Source \\ --
+UI["22"] = Instance.new("TextBox", UI["21"])
+UI["22"]["CursorPosition"] = -1
+UI["22"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["22"]["PlaceholderColor3"] = Color3.fromRGB(205, 205, 205)
+UI["22"]["ZIndex"] = 3
+UI["22"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["22"]["TextSize"] = 13
+UI["22"]["Name"] = [[Source]]
+UI["22"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["22"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Italic)
+UI["22"]["RichText"] = true
+UI["22"]["MultiLine"] = true
+UI["22"]["ClearTextOnFocus"] = false
+UI["22"]["ClipsDescendants"] = true
+UI["22"]["Size"] = UDim2.new(0.93, 0, 2, 0)
+UI["22"]["Position"] = UDim2.new(0.055, 0, 0.005, 0)
+UI["22"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+UI["22"]["Text"] = [[if IY_LOADED and not _G.IY_DEBUG == true then
     -- error("Infinite Yield is already running!", 0)
     return
 end
@@ -330,23 +291,22 @@ if not game:IsLoaded() then
 end
 
 currentVersion = "6.1"
-]];
-G2L["22"]["BackgroundTransparency"] = 1;
+]]
+UI["22"]["BackgroundTransparency"] = 1
 
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame.Source.Source2
-G2L["23"] = Instance.new("TextLabel", G2L["22"]);
-G2L["23"]["BorderSizePixel"] = 0;
-G2L["23"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["23"]["TextSize"] = 13;
-G2L["23"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
-G2L["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["23"]["BackgroundTransparency"] = 1;
-G2L["23"]["RichText"] = true;
-G2L["23"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["23"]["Text"] = [[if IY_LOADED and not _G.IY_DEBUG == true then
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame.Source.Source2 \\ --
+UI["23"] = Instance.new("TextLabel", UI["22"])
+UI["23"]["BorderSizePixel"] = 0
+UI["23"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["23"]["TextSize"] = 13
+UI["23"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Italic)
+UI["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["23"]["BackgroundTransparency"] = 1
+UI["23"]["RichText"] = true
+UI["23"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["23"]["Text"] = [[if IY_LOADED and not _G.IY_DEBUG == true then
     -- error("Infinite Yield is already running!", 0)
     return
 end
@@ -366,1204 +326,1085 @@ if not game:IsLoaded() then
 end
 
 currentVersion = "6.1"
-]];
-G2L["23"]["Name"] = [[Source2]];
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame.TextLabel
-G2L["24"] = Instance.new("TextLabel", G2L["21"]);
-G2L["24"]["BorderSizePixel"] = 0;
-G2L["24"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["24"]["BackgroundColor3"] = Color3.fromRGB(32, 31, 32);
-G2L["24"]["TextSize"] = 13;
-G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["24"]["TextColor3"] = Color3.fromRGB(158, 156, 158);
-G2L["24"]["BackgroundTransparency"] = 1;
-G2L["24"]["Size"] = UDim2.new(0.05, 0, 2, 0);
-G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["24"]["Text"] = [[1]];
-G2L["24"]["Position"] = UDim2.new(0.001, 0, 0.007, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame.UICorner
-G2L["25"] = Instance.new("UICorner", G2L["21"]);
-
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame.Frame
-G2L["26"] = Instance.new("Frame", G2L["21"]);
-G2L["26"]["BorderSizePixel"] = 0;
-G2L["26"]["BackgroundColor3"] = Color3.fromRGB(32, 31, 32);
-G2L["26"]["Size"] = UDim2.new(0.195, 0, 2, 0);
-G2L["26"]["Position"] = UDim2.new(0.803, 0, -0.004, 0);
-G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Execute
-G2L["27"] = Instance.new("TextButton", G2L["1e"]);
-G2L["27"]["BorderSizePixel"] = 0;
-G2L["27"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["27"]["TextSize"] = 25;
-G2L["27"]["TextColor3"] = Color3.fromRGB(221, 232, 255);
-G2L["27"]["BackgroundColor3"] = Color3.fromRGB(14, 102, 210);
-G2L["27"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["27"]["Size"] = UDim2.new(0, 67, 0, 31);
-G2L["27"]["Name"] = [[Execute]];
-G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["27"]["Text"] = [[]];
-G2L["27"]["Position"] = UDim2.new(0.15974, 0, 0.86222, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Execute.UICorner
-G2L["28"] = Instance.new("UICorner", G2L["27"]);
-G2L["28"]["CornerRadius"] = UDim.new(0.15, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Execute.TextLabel
-G2L["29"] = Instance.new("TextLabel", G2L["27"]);
-G2L["29"]["BorderSizePixel"] = 0;
-G2L["29"]["BackgroundColor3"] = Color3.fromRGB(14, 102, 210);
-G2L["29"]["TextSize"] = 18;
-G2L["29"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["29"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["29"]["BackgroundTransparency"] = 1;
-G2L["29"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["29"]["Text"] = [[Execute]];
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Execute.UIStroke
-G2L["2a"] = Instance.new("UIStroke", G2L["27"]);
-G2L["2a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["2a"]["Thickness"] = 0.8;
-G2L["2a"]["Color"] = Color3.fromRGB(22, 24, 27);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.clipboard
-G2L["2b"] = Instance.new("TextButton", G2L["1e"]);
-G2L["2b"]["BorderSizePixel"] = 0;
-G2L["2b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["2b"]["TextSize"] = 25;
-G2L["2b"]["TextColor3"] = Color3.fromRGB(221, 232, 255);
-G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(14, 102, 210);
-G2L["2b"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["2b"]["Size"] = UDim2.new(0, 67, 0, 31);
-G2L["2b"]["Name"] = [[clipboard]];
-G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2b"]["Text"] = [[]];
-G2L["2b"]["Position"] = UDim2.new(0.2874, 0, 0.86222, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.clipboard.UICorner
-G2L["2c"] = Instance.new("UICorner", G2L["2b"]);
-G2L["2c"]["CornerRadius"] = UDim.new(0.15, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.clipboard.TextLabel
-G2L["2d"] = Instance.new("TextLabel", G2L["2b"]);
-G2L["2d"]["BorderSizePixel"] = 0;
-G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2d"]["TextSize"] = 18;
-G2L["2d"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2d"]["BackgroundTransparency"] = 1;
-G2L["2d"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2d"]["Text"] = [[CBoard]];
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.clipboard.UIStroke
-G2L["2e"] = Instance.new("UIStroke", G2L["2b"]);
-G2L["2e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["2e"]["Thickness"] = 0.8;
-G2L["2e"]["Color"] = Color3.fromRGB(22, 24, 27);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Clear
-G2L["2f"] = Instance.new("TextButton", G2L["1e"]);
-G2L["2f"]["BorderSizePixel"] = 0;
-G2L["2f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["2f"]["TextSize"] = 25;
-G2L["2f"]["TextColor3"] = Color3.fromRGB(221, 232, 255);
-G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(37, 39, 45);
-G2L["2f"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["2f"]["Size"] = UDim2.new(0, 67, 0, 31);
-G2L["2f"]["Name"] = [[Clear]];
-G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2f"]["Text"] = [[]];
-G2L["2f"]["Position"] = UDim2.new(0.41684, 0, 0.86222, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Clear.UICorner
-G2L["30"] = Instance.new("UICorner", G2L["2f"]);
-G2L["30"]["CornerRadius"] = UDim.new(0.15, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Clear.TextLabel
-G2L["31"] = Instance.new("TextLabel", G2L["2f"]);
-G2L["31"]["BorderSizePixel"] = 0;
-G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["31"]["TextSize"] = 18;
-G2L["31"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["31"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["31"]["BackgroundTransparency"] = 1;
-G2L["31"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["31"]["Text"] = [[Clear]];
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Clear.UIStroke
-G2L["32"] = Instance.new("UIStroke", G2L["2f"]);
-G2L["32"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["32"]["Thickness"] = 0.8;
-G2L["32"]["Color"] = Color3.fromRGB(22, 24, 27);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Copy
-G2L["33"] = Instance.new("TextButton", G2L["1e"]);
-G2L["33"]["BorderSizePixel"] = 0;
-G2L["33"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["33"]["TextSize"] = 25;
-G2L["33"]["TextColor3"] = Color3.fromRGB(221, 232, 255);
-G2L["33"]["BackgroundColor3"] = Color3.fromRGB(37, 39, 45);
-G2L["33"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["33"]["Size"] = UDim2.new(0, 67, 0, 31);
-G2L["33"]["Name"] = [[Copy]];
-G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["33"]["Text"] = [[]];
-G2L["33"]["Position"] = UDim2.new(0.54837, 0, 0.86196, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Copy.UICorner
-G2L["34"] = Instance.new("UICorner", G2L["33"]);
-G2L["34"]["CornerRadius"] = UDim.new(0.15, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Copy.TextLabel
-G2L["35"] = Instance.new("TextLabel", G2L["33"]);
-G2L["35"]["BorderSizePixel"] = 0;
-G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["35"]["TextSize"] = 18;
-G2L["35"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["35"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["35"]["BackgroundTransparency"] = 1;
-G2L["35"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["35"]["Text"] = [[Copy]];
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Copy.UIStroke
-G2L["36"] = Instance.new("UIStroke", G2L["33"]);
-G2L["36"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["36"]["Thickness"] = 0.8;
-G2L["36"]["Color"] = Color3.fromRGB(22, 24, 27);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Paste
-G2L["37"] = Instance.new("TextButton", G2L["1e"]);
-G2L["37"]["BorderSizePixel"] = 0;
-G2L["37"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["37"]["TextSize"] = 25;
-G2L["37"]["TextColor3"] = Color3.fromRGB(221, 232, 255);
-G2L["37"]["BackgroundColor3"] = Color3.fromRGB(37, 39, 45);
-G2L["37"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["37"]["Size"] = UDim2.new(0, 67, 0, 31);
-G2L["37"]["Name"] = [[Paste]];
-G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["37"]["Text"] = [[]];
-G2L["37"]["Position"] = UDim2.new(0.67937, 0, 0.86196, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Paste.UICorner
-G2L["38"] = Instance.new("UICorner", G2L["37"]);
-G2L["38"]["CornerRadius"] = UDim.new(0.15, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Paste.TextLabel
-G2L["39"] = Instance.new("TextLabel", G2L["37"]);
-G2L["39"]["BorderSizePixel"] = 0;
-G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["39"]["TextSize"] = 18;
-G2L["39"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["39"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["39"]["BackgroundTransparency"] = 1;
-G2L["39"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["39"]["Text"] = [[Paste]];
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Paste.UIStroke
-G2L["3a"] = Instance.new("UIStroke", G2L["37"]);
-G2L["3a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["3a"]["Thickness"] = 0.8;
-G2L["3a"]["Color"] = Color3.fromRGB(22, 24, 27);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Save
-G2L["3b"] = Instance.new("TextButton", G2L["1e"]);
-G2L["3b"]["BorderSizePixel"] = 0;
-G2L["3b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["3b"]["TextSize"] = 25;
-G2L["3b"]["TextColor3"] = Color3.fromRGB(221, 232, 255);
-G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(37, 39, 45);
-G2L["3b"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["3b"]["Size"] = UDim2.new(0, 67, 0, 31);
-G2L["3b"]["Name"] = [[Save]];
-G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3b"]["Text"] = [[]];
-G2L["3b"]["Position"] = UDim2.new(0.81305, 0, 0.862, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Save.UICorner
-G2L["3c"] = Instance.new("UICorner", G2L["3b"]);
-G2L["3c"]["CornerRadius"] = UDim.new(0.15, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Save.TextLabel
-G2L["3d"] = Instance.new("TextLabel", G2L["3b"]);
-G2L["3d"]["BorderSizePixel"] = 0;
-G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3d"]["TextSize"] = 18;
-G2L["3d"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3d"]["BackgroundTransparency"] = 1;
-G2L["3d"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3d"]["Text"] = [[Save]];
-
-
--- StarterGui.Arcadia.MAIN.frames.executor.Executor.Save.UIStroke
-G2L["3e"] = Instance.new("UIStroke", G2L["3b"]);
-G2L["3e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["3e"]["Thickness"] = 0.8;
-G2L["3e"]["Color"] = Color3.fromRGB(22, 24, 27);
-
-
--- StarterGui.Arcadia.MAIN.frames.UIAspectRatioConstraint
-G2L["3f"] = Instance.new("UIAspectRatioConstraint", G2L["1a"]);
-G2L["3f"]["AspectRatio"] = 2.14982;
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts
-G2L["40"] = Instance.new("Frame", G2L["1a"]);
-G2L["40"]["Visible"] = false;
-G2L["40"]["BorderSizePixel"] = 0;
-G2L["40"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17);
-G2L["40"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["40"]["Position"] = UDim2.new(0, 0, -0.00231, 0);
-G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["40"]["Name"] = [[scripts]];
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.UICorner
-G2L["41"] = Instance.new("UICorner", G2L["40"]);
-
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.search
-G2L["42"] = Instance.new("Frame", G2L["40"]);
-G2L["42"]["BorderSizePixel"] = 0;
-G2L["42"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["42"]["Size"] = UDim2.new(0.98851, 0, 0.07728, 0);
-G2L["42"]["Position"] = UDim2.new(0.01041, 0, 0.02471, 0);
-G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["42"]["Name"] = [[search]];
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.search.TextLabel
-G2L["43"] = Instance.new("TextLabel", G2L["42"]);
-G2L["43"]["TextWrapped"] = true;
-G2L["43"]["BorderSizePixel"] = 0;
-G2L["43"]["TextScaled"] = true;
-G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["43"]["TextSize"] = 22;
-G2L["43"]["TextColor3"] = Color3.fromRGB(133, 132, 133);
-G2L["43"]["BackgroundTransparency"] = 1;
-G2L["43"]["Size"] = UDim2.new(0.28738, 0, 1, 0);
-G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["43"]["Text"] = [[scripts provided by scriptblox.com]];
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.search.TextLabel.UITextSizeConstraint
-G2L["44"] = Instance.new("UITextSizeConstraint", G2L["43"]);
-G2L["44"]["MaxTextSize"] = 22;
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.search.TextBox
-G2L["45"] = Instance.new("TextBox", G2L["42"]);
-G2L["45"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["45"]["BorderSizePixel"] = 0;
-G2L["45"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["45"]["TextWrapped"] = true;
-G2L["45"]["TextSize"] = 15;
-G2L["45"]["TextScaled"] = true;
-G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["45"]["ClipsDescendants"] = true;
-G2L["45"]["PlaceholderText"] = [[type game name!]];
-G2L["45"]["Size"] = UDim2.new(0.19601, 0, 0.95, 0);
-G2L["45"]["Position"] = UDim2.new(0.75415, 0, 0.01265, 0);
-G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["Text"] = [[]];
-G2L["45"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.search.TextBox.UITextSizeConstraint
-G2L["46"] = Instance.new("UITextSizeConstraint", G2L["45"]);
-G2L["46"]["MaxTextSize"] = 10;
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.search.ImageButton
-G2L["47"] = Instance.new("ImageButton", G2L["42"]);
-G2L["47"]["BorderSizePixel"] = 0;
-G2L["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["47"]["Image"] = [[rbxassetid://15115310494]];
-G2L["47"]["Size"] = UDim2.new(0.02492, 0, 0.75, 0);
-G2L["47"]["BackgroundTransparency"] = 1;
-G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["47"]["Position"] = UDim2.new(0.95797, 0, 0.0697, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.search.Frame
-G2L["48"] = Instance.new("Frame", G2L["42"]);
-G2L["48"]["BorderSizePixel"] = 0;
-G2L["48"]["BackgroundColor3"] = Color3.fromRGB(160, 160, 160);
-G2L["48"]["Size"] = UDim2.new(0.19601, 0, 0.05, 0);
-G2L["48"]["Position"] = UDim2.new(0.754, 0, 0.94, 0);
-G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame
-G2L["49"] = Instance.new("ScrollingFrame", G2L["40"]);
-G2L["49"]["Active"] = true;
-G2L["49"]["BorderSizePixel"] = 0;
-G2L["49"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["49"]["Size"] = UDim2.new(0.98308, 0, 0.86987, 0);
-G2L["49"]["Position"] = UDim2.new(0.01041, 0, 0.10199, 0);
-G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["49"]["ScrollBarThickness"] = 9;
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder
-G2L["4a"] = Instance.new("Folder", G2L["49"]);
-
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame
-G2L["4b"] = Instance.new("Frame", G2L["4a"]);
-G2L["4b"]["Visible"] = false;
-G2L["4b"]["BorderSizePixel"] = 0;
-G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
-G2L["4b"]["Size"] = UDim2.new(0, 175, 0, 150);
-G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.UICorner
-G2L["4c"] = Instance.new("UICorner", G2L["4b"]);
-
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.ImageLabel
-G2L["4d"] = Instance.new("ImageLabel", G2L["4b"]);
-G2L["4d"]["BorderSizePixel"] = 0;
-G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4d"]["ImageTransparency"] = 0.4;
-G2L["4d"]["Image"] = [[rbxassetid://15117873611]];
-G2L["4d"]["Size"] = UDim2.new(1, 0, 0.66842, 0);
-G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4d"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.ImageLabel.UICorner
-G2L["4e"] = Instance.new("UICorner", G2L["4d"]);
-
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.gg9
-G2L["4f"] = Instance.new("ImageButton", G2L["4b"]);
-G2L["4f"]["BorderSizePixel"] = 0;
-G2L["4f"]["SliceScale"] = 0;
-G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(151, 3, 255);
-G2L["4f"]["Image"] = [[rbxassetid://15115194626]];
-G2L["4f"]["Size"] = UDim2.new(0.16316, 0, 0.15789, 0);
-G2L["4f"]["Name"] = [[gg9]];
-G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4f"]["Position"] = UDim2.new(0.78689, 0, 0.76561, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.gg9.UICorner
-G2L["50"] = Instance.new("UICorner", G2L["4f"]);
-
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.TextLabel
-G2L["51"] = Instance.new("TextLabel", G2L["4b"]);
-G2L["51"]["TextWrapped"] = true;
-G2L["51"]["BorderSizePixel"] = 0;
-G2L["51"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["51"]["TextScaled"] = true;
-G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["51"]["TextSize"] = 20;
-G2L["51"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["51"]["BackgroundTransparency"] = 1;
-G2L["51"]["Size"] = UDim2.new(0.65263, 0, 0.10526, 0);
-G2L["51"]["ClipsDescendants"] = true;
-G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["51"]["Text"] = [[Arcadia Hub BLux Fruit]];
-G2L["51"]["Position"] = UDim2.new(0.06354, 0, 0.66175, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.TextLabel.UITextSizeConstraint
-G2L["52"] = Instance.new("UITextSizeConstraint", G2L["51"]);
-G2L["52"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.UIGridLayout
-G2L["53"] = Instance.new("UIGridLayout", G2L["49"]);
-G2L["53"]["CellSize"] = UDim2.new(0.32, 0, 0.32, 0);
-G2L["53"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-G2L["53"]["CellPadding"] = UDim2.new(0, 10, 0, 5);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings
-G2L["54"] = Instance.new("Frame", G2L["1a"]);
-G2L["54"]["Visible"] = false;
-G2L["54"]["BorderSizePixel"] = 0;
-G2L["54"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["54"]["Size"] = UDim2.new(1, 0, 1.00346, 0);
-G2L["54"]["Position"] = UDim2.new(0, 0, -0.00231, 0);
-G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["54"]["Name"] = [[settings]];
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.UICorner
-G2L["55"] = Instance.new("UICorner", G2L["54"]);
-
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language
-G2L["56"] = Instance.new("Frame", G2L["54"]);
-G2L["56"]["BorderSizePixel"] = 0;
-G2L["56"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["56"]["Size"] = UDim2.new(0.33662, 0, 0.92759, 0);
-G2L["56"]["Position"] = UDim2.new(0.61576, 0, 0.03448, 0);
-G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["56"]["Name"] = [[language]];
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.lol
-G2L["57"] = Instance.new("TextLabel", G2L["56"]);
-G2L["57"]["TextWrapped"] = true;
-G2L["57"]["BorderSizePixel"] = 0;
-G2L["57"]["TextScaled"] = true;
-G2L["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["57"]["TextSize"] = 20;
-G2L["57"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["57"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["57"]["BackgroundTransparency"] = 1;
-G2L["57"]["Size"] = UDim2.new(0.99512, 0, 0.07435, 0);
-G2L["57"]["ClipsDescendants"] = true;
-G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["57"]["Text"] = [[Executor Language]];
-G2L["57"]["Name"] = [[lol]];
-G2L["57"]["Position"] = UDim2.new(0, 0, -0.00072, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.lol.UITextSizeConstraint
-G2L["58"] = Instance.new("UITextSizeConstraint", G2L["57"]);
-G2L["58"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame
-G2L["59"] = Instance.new("Frame", G2L["56"]);
-G2L["59"]["BorderSizePixel"] = 0;
-G2L["59"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["59"]["Size"] = UDim2.new(0.518, 0, 0.83643, 0);
-G2L["59"]["Position"] = UDim2.new(0.2381, 0, 0.10197, 0);
-G2L["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.English
-G2L["5a"] = Instance.new("TextButton", G2L["59"]);
-G2L["5a"]["TextWrapped"] = true;
-G2L["5a"]["TextStrokeTransparency"] = 0;
-G2L["5a"]["BorderSizePixel"] = 0;
-G2L["5a"]["TextSize"] = 30;
-G2L["5a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5a"]["TextScaled"] = true;
-G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["5a"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5a"]["Size"] = UDim2.new(0.4077, 0, 0.09143, 0);
-G2L["5a"]["Name"] = [[English]];
-G2L["5a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5a"]["Text"] = [[English]];
-G2L["5a"]["Position"] = UDim2.new(0.04573, 0, 0.03236, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.English.UITextSizeConstraint
-G2L["5b"] = Instance.new("UITextSizeConstraint", G2L["5a"]);
-G2L["5b"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Chinese
-G2L["5c"] = Instance.new("TextButton", G2L["59"]);
-G2L["5c"]["TextWrapped"] = true;
-G2L["5c"]["TextStrokeTransparency"] = 0;
-G2L["5c"]["BorderSizePixel"] = 0;
-G2L["5c"]["TextSize"] = 30;
-G2L["5c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5c"]["TextScaled"] = true;
-G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["5c"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5c"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["5c"]["Name"] = [[Chinese]];
-G2L["5c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5c"]["Text"] = [[Chinese]];
-G2L["5c"]["Position"] = UDim2.new(0.55485, 0, 0.69268, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Chinese.UITextSizeConstraint
-G2L["5d"] = Instance.new("UITextSizeConstraint", G2L["5c"]);
-G2L["5d"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Spanish
-G2L["5e"] = Instance.new("TextButton", G2L["59"]);
-G2L["5e"]["TextWrapped"] = true;
-G2L["5e"]["TextStrokeTransparency"] = 0;
-G2L["5e"]["BorderSizePixel"] = 0;
-G2L["5e"]["TextSize"] = 30;
-G2L["5e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5e"]["TextScaled"] = true;
-G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["5e"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5e"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["5e"]["Name"] = [[Spanish]];
-G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5e"]["Text"] = [[Spanish]];
-G2L["5e"]["Position"] = UDim2.new(0.55485, 0, 0.29649, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Spanish.UITextSizeConstraint
-G2L["5f"] = Instance.new("UITextSizeConstraint", G2L["5e"]);
-G2L["5f"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Arabic
-G2L["60"] = Instance.new("TextButton", G2L["59"]);
-G2L["60"]["TextWrapped"] = true;
-G2L["60"]["TextStrokeTransparency"] = 0;
-G2L["60"]["BorderSizePixel"] = 0;
-G2L["60"]["TextSize"] = 30;
-G2L["60"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["60"]["TextScaled"] = true;
-G2L["60"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["60"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["60"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["60"]["Name"] = [[Arabic]];
-G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["60"]["Text"] = [[Arabic]];
-G2L["60"]["Position"] = UDim2.new(0.03871, 0, 0.16443, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Arabic.UITextSizeConstraint
-G2L["61"] = Instance.new("UITextSizeConstraint", G2L["60"]);
-G2L["61"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Hindi
-G2L["62"] = Instance.new("TextButton", G2L["59"]);
-G2L["62"]["TextWrapped"] = true;
-G2L["62"]["TextStrokeTransparency"] = 0;
-G2L["62"]["BorderSizePixel"] = 0;
-G2L["62"]["TextSize"] = 30;
-G2L["62"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["62"]["TextScaled"] = true;
-G2L["62"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["62"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["62"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["62"]["Name"] = [[Hindi]];
-G2L["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["62"]["Text"] = [[Hindi]];
-G2L["62"]["Position"] = UDim2.new(0.55485, 0, 0.4184, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Hindi.UITextSizeConstraint
-G2L["63"] = Instance.new("UITextSizeConstraint", G2L["62"]);
-G2L["63"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.French
-G2L["64"] = Instance.new("TextButton", G2L["59"]);
-G2L["64"]["TextWrapped"] = true;
-G2L["64"]["TextStrokeTransparency"] = 0;
-G2L["64"]["BorderSizePixel"] = 0;
-G2L["64"]["TextSize"] = 30;
-G2L["64"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["64"]["TextScaled"] = true;
-G2L["64"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["64"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["64"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["64"]["Name"] = [[French]];
-G2L["64"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["64"]["Text"] = [[French]];
-G2L["64"]["Position"] = UDim2.new(0.03871, 0, 0.69268, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.French.UITextSizeConstraint
-G2L["65"] = Instance.new("UITextSizeConstraint", G2L["64"]);
-G2L["65"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Russian
-G2L["66"] = Instance.new("TextButton", G2L["59"]);
-G2L["66"]["TextWrapped"] = true;
-G2L["66"]["TextStrokeTransparency"] = 0;
-G2L["66"]["BorderSizePixel"] = 0;
-G2L["66"]["TextSize"] = 30;
-G2L["66"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["66"]["TextScaled"] = true;
-G2L["66"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["66"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["66"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["66"]["Name"] = [[Russian]];
-G2L["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["66"]["Text"] = [[Russian]];
-G2L["66"]["Position"] = UDim2.new(0.04776, 0, 0.83491, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Russian.UITextSizeConstraint
-G2L["67"] = Instance.new("UITextSizeConstraint", G2L["66"]);
-G2L["67"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Bengali
-G2L["68"] = Instance.new("TextButton", G2L["59"]);
-G2L["68"]["TextWrapped"] = true;
-G2L["68"]["TextStrokeTransparency"] = 0;
-G2L["68"]["BorderSizePixel"] = 0;
-G2L["68"]["TextSize"] = 30;
-G2L["68"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["68"]["TextScaled"] = true;
-G2L["68"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["68"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["68"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["68"]["Name"] = [[Bengali]];
-G2L["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["68"]["Text"] = [[Bengali]];
-G2L["68"]["Position"] = UDim2.new(0.55485, 0, 0.55554, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Bengali.UITextSizeConstraint
-G2L["69"] = Instance.new("UITextSizeConstraint", G2L["68"]);
-G2L["69"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Portuguese
-G2L["6a"] = Instance.new("TextButton", G2L["59"]);
-G2L["6a"]["TextWrapped"] = true;
-G2L["6a"]["TextStrokeTransparency"] = 0;
-G2L["6a"]["BorderSizePixel"] = 0;
-G2L["6a"]["TextSize"] = 30;
-G2L["6a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6a"]["TextScaled"] = true;
-G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["6a"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6a"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["6a"]["Name"] = [[Portuguese]];
-G2L["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6a"]["Text"] = [[Portuguese]];
-G2L["6a"]["Position"] = UDim2.new(0.55485, 0, 0.16443, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Portuguese.UITextSizeConstraint
-G2L["6b"] = Instance.new("UITextSizeConstraint", G2L["6a"]);
-G2L["6b"]["MaxTextSize"] = 14;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.German
-G2L["6c"] = Instance.new("TextButton", G2L["59"]);
-G2L["6c"]["TextWrapped"] = true;
-G2L["6c"]["TextStrokeTransparency"] = 0;
-G2L["6c"]["BorderSizePixel"] = 0;
-G2L["6c"]["TextSize"] = 30;
-G2L["6c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6c"]["TextScaled"] = true;
-G2L["6c"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["6c"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6c"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["6c"]["Name"] = [[German]];
-G2L["6c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6c"]["Text"] = [[German]];
-G2L["6c"]["Position"] = UDim2.new(0.04776, 0, 0.4184, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.German.UITextSizeConstraint
-G2L["6d"] = Instance.new("UITextSizeConstraint", G2L["6c"]);
-G2L["6d"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Japanese
-G2L["6e"] = Instance.new("TextButton", G2L["59"]);
-G2L["6e"]["TextWrapped"] = true;
-G2L["6e"]["TextStrokeTransparency"] = 0;
-G2L["6e"]["BorderSizePixel"] = 0;
-G2L["6e"]["TextSize"] = 30;
-G2L["6e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6e"]["TextScaled"] = true;
-G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["6e"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6e"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["6e"]["Name"] = [[Japanese]];
-G2L["6e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6e"]["Text"] = [[Japanese]];
-G2L["6e"]["Position"] = UDim2.new(0.03871, 0, 0.55554, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Japanese.UITextSizeConstraint
-G2L["6f"] = Instance.new("UITextSizeConstraint", G2L["6e"]);
-G2L["6f"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Korean
-G2L["70"] = Instance.new("TextButton", G2L["59"]);
-G2L["70"]["TextWrapped"] = true;
-G2L["70"]["TextStrokeTransparency"] = 0;
-G2L["70"]["BorderSizePixel"] = 0;
-G2L["70"]["TextSize"] = 30;
-G2L["70"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["70"]["TextScaled"] = true;
-G2L["70"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["70"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["70"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["70"]["Name"] = [[Korean]];
-G2L["70"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["70"]["Text"] = [[Korean]];
-G2L["70"]["Position"] = UDim2.new(0.03871, 0, 0.29649, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Korean.UITextSizeConstraint
-G2L["71"] = Instance.new("UITextSizeConstraint", G2L["70"]);
-G2L["71"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Swahili
-G2L["72"] = Instance.new("TextButton", G2L["59"]);
-G2L["72"]["TextWrapped"] = true;
-G2L["72"]["TextStrokeTransparency"] = 0;
-G2L["72"]["BorderSizePixel"] = 0;
-G2L["72"]["TextSize"] = 30;
-G2L["72"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["72"]["TextScaled"] = true;
-G2L["72"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["72"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["72"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["72"]["Name"] = [[Swahili]];
-G2L["72"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["72"]["Text"] = [[Swahili]];
-G2L["72"]["Position"] = UDim2.new(0.55485, 0, 0.83491, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Swahili.UITextSizeConstraint
-G2L["73"] = Instance.new("UITextSizeConstraint", G2L["72"]);
-G2L["73"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Marathi
-G2L["74"] = Instance.new("TextButton", G2L["59"]);
-G2L["74"]["TextWrapped"] = true;
-G2L["74"]["TextStrokeTransparency"] = 0;
-G2L["74"]["BorderSizePixel"] = 0;
-G2L["74"]["TextSize"] = 30;
-G2L["74"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["74"]["TextScaled"] = true;
-G2L["74"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["74"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["74"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["74"]["Name"] = [[Marathi]];
-G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["74"]["Text"] = [[Marathi]];
-G2L["74"]["Position"] = UDim2.new(0.2832, 0, 0.98221, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Marathi.UITextSizeConstraint
-G2L["75"] = Instance.new("UITextSizeConstraint", G2L["74"]);
-G2L["75"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Turkish
-G2L["76"] = Instance.new("TextButton", G2L["59"]);
-G2L["76"]["TextWrapped"] = true;
-G2L["76"]["TextStrokeTransparency"] = 0;
-G2L["76"]["BorderSizePixel"] = 0;
-G2L["76"]["TextSize"] = 30;
-G2L["76"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["76"]["TextScaled"] = true;
-G2L["76"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["76"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["76"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0);
-G2L["76"]["Name"] = [[Turkish]];
-G2L["76"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["76"]["Text"] = [[Turkish]];
-G2L["76"]["Position"] = UDim2.new(0.55485, 0, 0.03236, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Turkish.UITextSizeConstraint
-G2L["77"] = Instance.new("UITextSizeConstraint", G2L["76"]);
-G2L["77"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.language.gg9
-G2L["78"] = Instance.new("Frame", G2L["56"]);
-G2L["78"]["BorderSizePixel"] = 0;
-G2L["78"]["BackgroundColor3"] = Color3.fromRGB(135, 46, 204);
-G2L["78"]["Size"] = UDim2.new(0.47317, 0, 0.01115, 0);
-G2L["78"]["Position"] = UDim2.new(0.26341, 0, 0.0713, 0);
-G2L["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["78"]["Name"] = [[gg9]];
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color
-G2L["79"] = Instance.new("Frame", G2L["54"]);
-G2L["79"]["BorderSizePixel"] = 0;
-G2L["79"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["79"]["Size"] = UDim2.new(0.33662, 0, 0.72414, 0);
-G2L["79"]["Position"] = UDim2.new(0.07061, 0, 0.07586, 0);
-G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["79"]["Name"] = [[color]];
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.Frame
-G2L["7a"] = Instance.new("Frame", G2L["79"]);
-G2L["7a"]["BorderSizePixel"] = 0;
-G2L["7a"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["7a"]["Size"] = UDim2.new(0.56331, 0, 1.14822, 0);
-G2L["7a"]["Position"] = UDim2.new(0.21371, 0, 0.07559, 0);
-G2L["7a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ColorWheel_LocalScript
-G2L["7b"] = Instance.new("LocalScript", G2L["7a"]);
-G2L["7b"]["Name"] = [[ColorWheel_LocalScript]];
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.Frame.Frame
-G2L["7c"] = Instance.new("Frame", G2L["7a"]);
-G2L["7c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7c"]["Size"] = UDim2.new(0.30928, 0, 0.12444, 0);
-G2L["7c"]["Position"] = UDim2.new(0.3295, 0, 0.61254, 0);
-G2L["7c"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.Frame.Frame.UICorner
-G2L["7d"] = Instance.new("UICorner", G2L["7c"]);
-
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ColorWheel
-G2L["7e"] = Instance.new("ImageButton", G2L["7a"]);
-G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["7e"]["Image"] = [[rbxassetid://11224004075]];
-G2L["7e"]["Size"] = UDim2.new(1.03093, 0, 0.44444, 0);
-G2L["7e"]["BackgroundTransparency"] = 1;
-G2L["7e"]["Name"] = [[ColorWheel]];
-G2L["7e"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["7e"]["Position"] = UDim2.new(0.49681, 0, 0.33628, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ColorWheel.Cursor
-G2L["7f"] = Instance.new("ImageLabel", G2L["7e"]);
-G2L["7f"]["ZIndex"] = 4;
-G2L["7f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["7f"]["Image"] = [[rbxassetid://11226149359]];
-G2L["7f"]["Size"] = UDim2.new(0.15, 0, 0.15, 0);
-G2L["7f"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["7f"]["BackgroundTransparency"] = 1;
-G2L["7f"]["Name"] = [[Cursor]];
-G2L["7f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ValueSelector
-G2L["80"] = Instance.new("TextButton", G2L["7a"]);
-G2L["80"]["Active"] = false;
-G2L["80"]["AutoButtonColor"] = false;
-G2L["80"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["80"]["Selectable"] = false;
-G2L["80"]["Size"] = UDim2.new(0.30928, 0, 0.44444, 0);
-G2L["80"]["Name"] = [[ValueSelector]];
-G2L["80"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["80"]["Text"] = [[]];
-G2L["80"]["Position"] = UDim2.new(-0.45175, 0, 0.12422, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ValueSelector.UIGradient
-G2L["81"] = Instance.new("UIGradient", G2L["80"]);
-G2L["81"]["Rotation"] = -90;
-G2L["81"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))};
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ValueSelector.UIStroke
-G2L["82"] = Instance.new("UIStroke", G2L["80"]);
-G2L["82"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ValueSelector.Cursor
-G2L["83"] = Instance.new("Frame", G2L["80"]);
-G2L["83"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["83"]["Size"] = UDim2.new(1, 0, 0.05, 0);
-G2L["83"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
-G2L["83"]["Name"] = [[Cursor]];
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.gg9
-G2L["84"] = Instance.new("Frame", G2L["79"]);
-G2L["84"]["BorderSizePixel"] = 0;
-G2L["84"]["BackgroundColor3"] = Color3.fromRGB(135, 46, 204);
-G2L["84"]["Size"] = UDim2.new(0.47317, 0, 0.01429, 0);
-G2L["84"]["Position"] = UDim2.new(0.25854, 0, 0.0329, 0);
-G2L["84"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["84"]["Name"] = [[gg9]];
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.lol2
-G2L["85"] = Instance.new("TextButton", G2L["79"]);
-G2L["85"]["TextWrapped"] = true;
-G2L["85"]["TextStrokeTransparency"] = 0;
-G2L["85"]["BorderSizePixel"] = 0;
-G2L["85"]["TextSize"] = 22;
-G2L["85"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["85"]["TextScaled"] = true;
-G2L["85"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22);
-G2L["85"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["85"]["Size"] = UDim2.new(0.42439, 0, 0.08571, 0);
-G2L["85"]["Name"] = [[lol2]];
-G2L["85"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["85"]["Text"] = [[back to normal]];
-G2L["85"]["Position"] = UDim2.new(0.28713, 0, 0.07133, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.lol2.UITextSizeConstraint
-G2L["86"] = Instance.new("UITextSizeConstraint", G2L["85"]);
-G2L["86"]["MaxTextSize"] = 22;
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.lol
-G2L["87"] = Instance.new("TextLabel", G2L["79"]);
-G2L["87"]["TextWrapped"] = true;
-G2L["87"]["BorderSizePixel"] = 0;
-G2L["87"]["TextScaled"] = true;
-G2L["87"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["87"]["TextSize"] = 20;
-G2L["87"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["87"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["87"]["BackgroundTransparency"] = 1;
-G2L["87"]["Size"] = UDim2.new(0.99512, 0, 0.09524, 0);
-G2L["87"]["ClipsDescendants"] = true;
-G2L["87"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["87"]["Text"] = [[Executor Color]];
-G2L["87"]["Name"] = [[lol]];
-G2L["87"]["Position"] = UDim2.new(0, 0, -0.06263, 0);
-
-
--- StarterGui.Arcadia.MAIN.frames.settings.color.lol.UITextSizeConstraint
-G2L["88"] = Instance.new("UITextSizeConstraint", G2L["87"]);
-G2L["88"]["MaxTextSize"] = 20;
-
-
--- StarterGui.Arcadia.MAIN.UICorner
-G2L["89"] = Instance.new("UICorner", G2L["b"]);
-
-
-
--- StarterGui.Arcadia.MAIN.UIStroke
-G2L["8a"] = Instance.new("UIStroke", G2L["b"]);
-G2L["8a"]["Transparency"] = 0.8;
-G2L["8a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["8a"]["Thickness"] = 5;
-
-
--- StarterGui.Arcadia.MAIN.Corners
-G2L["8b"] = Instance.new("Folder", G2L["b"]);
-G2L["8b"]["Name"] = [[Corners]];
-
-
--- StarterGui.Arcadia.MAIN.Corners.10
-G2L["8c"] = Instance.new("TextButton", G2L["8b"]);
-G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8c"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["8c"]["Selectable"] = false;
-G2L["8c"]["ZIndex"] = 5;
-G2L["8c"]["AnchorPoint"] = Vector2.new(1, 0);
-G2L["8c"]["Size"] = UDim2.new(0, 15, 0, 15);
-G2L["8c"]["Name"] = [[10]];
-G2L["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8c"]["Text"] = [[]];
-G2L["8c"]["Visible"] = false;
-G2L["8c"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton;
-G2L["8c"]["Position"] = UDim2.new(0, 0, 1, 0);
-
-
--- StarterGui.Arcadia.MAIN.Corners.11
-G2L["8d"] = Instance.new("TextButton", G2L["8b"]);
-G2L["8d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8d"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["8d"]["Selectable"] = false;
-G2L["8d"]["ZIndex"] = 5;
-G2L["8d"]["AnchorPoint"] = Vector2.new(1, 1);
-G2L["8d"]["Size"] = UDim2.new(0, 15, 0, 15);
-G2L["8d"]["Name"] = [[11]];
-G2L["8d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8d"]["Text"] = [[]];
-G2L["8d"]["Visible"] = false;
-G2L["8d"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton;
-
-
--- StarterGui.Arcadia.MAIN.Corners.01
-G2L["8e"] = Instance.new("TextButton", G2L["8b"]);
-G2L["8e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8e"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["8e"]["Selectable"] = false;
-G2L["8e"]["ZIndex"] = 5;
-G2L["8e"]["AnchorPoint"] = Vector2.new(0, 1);
-G2L["8e"]["Size"] = UDim2.new(0, 15, 0, 15);
-G2L["8e"]["Name"] = [[01]];
-G2L["8e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8e"]["Text"] = [[]];
-G2L["8e"]["Visible"] = false;
-G2L["8e"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton;
-G2L["8e"]["Position"] = UDim2.new(1, 0, 0, 0);
-
-
--- StarterGui.Arcadia.MAIN.Corners.00
-G2L["8f"] = Instance.new("TextButton", G2L["8b"]);
-G2L["8f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8f"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["8f"]["Selectable"] = false;
-G2L["8f"]["ZIndex"] = 5;
-G2L["8f"]["Size"] = UDim2.new(0, 15, 0, 15);
-G2L["8f"]["Name"] = [[00]];
-G2L["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8f"]["Text"] = [[]];
-G2L["8f"]["Visible"] = false;
-G2L["8f"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton;
-G2L["8f"]["Position"] = UDim2.new(1, 0, 1, 0);
-
-
--- StarterGui.Arcadia.MAIN.UISizeConstraint
-G2L["90"] = Instance.new("UISizeConstraint", G2L["b"]);
-G2L["90"]["MinSize"] = Vector2.new(200, 200);
-
-
--- StarterGui.Arcadia.MAIN.Up
-G2L["91"] = Instance.new("TextButton", G2L["b"]);
-G2L["91"]["BorderSizePixel"] = 0;
-G2L["91"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["91"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["91"]["Selectable"] = false;
-G2L["91"]["AnchorPoint"] = Vector2.new(0.5, 1);
-G2L["91"]["Size"] = UDim2.new(0, 15, 0, 15);
-G2L["91"]["Name"] = [[Up]];
-G2L["91"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["91"]["Text"] = [[]];
-G2L["91"]["Visible"] = false;
-G2L["91"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton;
-G2L["91"]["Position"] = UDim2.new(0.5, 0, 0, 0);
-
-
--- StarterGui.Arcadia.MAIN.Left
-G2L["92"] = Instance.new("TextButton", G2L["b"]);
-G2L["92"]["BorderSizePixel"] = 0;
-G2L["92"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["92"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["92"]["Selectable"] = false;
-G2L["92"]["AnchorPoint"] = Vector2.new(1, 0.5);
-G2L["92"]["Size"] = UDim2.new(0, 15, 0, 15);
-G2L["92"]["Name"] = [[Left]];
-G2L["92"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["92"]["Text"] = [[]];
-G2L["92"]["Visible"] = false;
-G2L["92"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton;
-G2L["92"]["Position"] = UDim2.new(0, 0, 0.5, 0);
-
-
--- StarterGui.Arcadia.MAIN.Right
-G2L["93"] = Instance.new("TextButton", G2L["b"]);
-G2L["93"]["BorderSizePixel"] = 0;
-G2L["93"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["93"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["93"]["Selectable"] = false;
-G2L["93"]["AnchorPoint"] = Vector2.new(0, 0.5);
-G2L["93"]["Size"] = UDim2.new(0, 15, 0, 15);
-G2L["93"]["Name"] = [[Right]];
-G2L["93"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["93"]["Text"] = [[]];
-G2L["93"]["Visible"] = false;
-G2L["93"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton;
-G2L["93"]["Position"] = UDim2.new(1, 0, 0.5, 0);
-
-
--- StarterGui.Arcadia.MAIN.Down
-G2L["94"] = Instance.new("TextButton", G2L["b"]);
-G2L["94"]["BorderSizePixel"] = 0;
-G2L["94"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["94"]["BorderMode"] = Enum.BorderMode.Inset;
-G2L["94"]["Selectable"] = false;
-G2L["94"]["AnchorPoint"] = Vector2.new(0.5, 0);
-G2L["94"]["Size"] = UDim2.new(0, 15, 0, 15);
-G2L["94"]["Name"] = [[Down]];
-G2L["94"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["94"]["Text"] = [[]];
-G2L["94"]["Visible"] = false;
-G2L["94"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton;
-G2L["94"]["Position"] = UDim2.new(0.5, 0, 1, 0);
-
-
--- StarterGui.Arcadia.MAIN.UIAspectRatioConstraint
-G2L["95"] = Instance.new("UIAspectRatioConstraint", G2L["b"]);
-G2L["95"]["AspectRatio"] = 1.91169;
-
-
--- StarterGui.Arcadia.MAIN.gg9
-G2L["96"] = Instance.new("ImageLabel", G2L["b"]);
-G2L["96"]["ZIndex"] = 0;
-G2L["96"]["BorderSizePixel"] = 0;
-G2L["96"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["96"]["ImageTransparency"] = 0.9;
-G2L["96"]["ImageColor3"] = Color3.fromRGB(106, 55, 120);
-G2L["96"]["Image"] = [[rbxassetid://15114678644]];
-G2L["96"]["Size"] = UDim2.new(1.12479, 0, 1.15077, 0);
-G2L["96"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["96"]["BackgroundTransparency"] = 1;
-G2L["96"]["Name"] = [[gg9]];
-G2L["96"]["Position"] = UDim2.new(-0.05824, 0, -0.07614, 0);
-
-
--- StarterGui.Arcadia.MAIN.topbar
-G2L["97"] = Instance.new("Frame", G2L["b"]);
-G2L["97"]["BorderSizePixel"] = 0;
-G2L["97"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28);
-G2L["97"]["Size"] = UDim2.new(1, 0, 0.02256, 0);
-G2L["97"]["Position"] = UDim2.new(-0, 0, 0.107, 0);
-G2L["97"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["97"]["Name"] = [[topbar]];
-
-
--- StarterGui.Arcadia.MAIN.topbar.UICorner
-G2L["98"] = Instance.new("UICorner", G2L["97"]);
-G2L["98"]["CornerRadius"] = UDim.new(0, 5);
-
-
--- StarterGui.Arcadia.ImageButton
-G2L["99"] = Instance.new("ImageButton", G2L["1"]);
-G2L["99"]["BorderSizePixel"] = 0;
-G2L["99"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["99"]["Image"] = [[rbxassetid://15204016915]];
-G2L["99"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["99"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["99"]["Visible"] = false;
-
+]]
+UI["23"]["Name"] = [[Source2]]
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame.TextLabel \\ --
+UI["24"] = Instance.new("TextLabel", UI["21"])
+UI["24"]["BorderSizePixel"] = 0
+UI["24"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["24"]["BackgroundColor3"] = Color3.fromRGB(32, 31, 32)
+UI["24"]["TextSize"] = 13
+UI["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["24"]["TextColor3"] = Color3.fromRGB(158, 156, 158)
+UI["24"]["BackgroundTransparency"] = 1
+UI["24"]["Size"] = UDim2.new(0.05, 0, 2, 0)
+UI["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["24"]["Text"] = [[1]]
+UI["24"]["Position"] = UDim2.new(0.001, 0, 0.007, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame.UICorner \\ --
+UI["25"] = Instance.new("UICorner", UI["21"])
+
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame.Frame \\ --
+UI["26"] = Instance.new("Frame", UI["21"])
+UI["26"]["BorderSizePixel"] = 0
+UI["26"]["BackgroundColor3"] = Color3.fromRGB(32, 31, 32)
+UI["26"]["Size"] = UDim2.new(0.195, 0, 2, 0)
+UI["26"]["Position"] = UDim2.new(0.803, 0, -0.004, 0)
+UI["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["26"]["BackgroundTransparency"] = 1
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Execute \\ --
+UI["27"] = Instance.new("TextButton", UI["1e"])
+UI["27"]["BorderSizePixel"] = 0
+UI["27"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["27"]["TextSize"] = 25
+UI["27"]["TextColor3"] = Color3.fromRGB(221, 232, 255)
+UI["27"]["BackgroundColor3"] = Color3.fromRGB(14, 102, 210)
+UI["27"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["27"]["Size"] = UDim2.new(0, 67, 0, 31)
+UI["27"]["Name"] = [[Execute]]
+UI["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["27"]["Text"] = [[]]
+UI["27"]["Position"] = UDim2.new(0.15974, 0, 0.86222, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Execute.UICorner \\ --
+UI["28"] = Instance.new("UICorner", UI["27"])
+UI["28"]["CornerRadius"] = UDim.new(0.15, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Execute.TextLabel \\ --
+UI["29"] = Instance.new("TextLabel", UI["27"])
+UI["29"]["BorderSizePixel"] = 0
+UI["29"]["BackgroundColor3"] = Color3.fromRGB(14, 102, 210)
+UI["29"]["TextSize"] = 18
+UI["29"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["29"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["29"]["BackgroundTransparency"] = 1
+UI["29"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["29"]["Text"] = [[Execute]]
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Execute.UIStroke \\ --
+UI["2a"] = Instance.new("UIStroke", UI["27"])
+UI["2a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+UI["2a"]["Thickness"] = 0.8
+UI["2a"]["Color"] = Color3.fromRGB(22, 24, 27)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.clipboard \\ --
+UI["2b"] = Instance.new("TextButton", UI["1e"])
+UI["2b"]["BorderSizePixel"] = 0
+UI["2b"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["2b"]["TextSize"] = 25
+UI["2b"]["TextColor3"] = Color3.fromRGB(221, 232, 255)
+UI["2b"]["BackgroundColor3"] = Color3.fromRGB(14, 102, 210)
+UI["2b"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["2b"]["Size"] = UDim2.new(0, 67, 0, 31)
+UI["2b"]["Name"] = [[clipboard]]
+UI["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2b"]["Text"] = [[]]
+UI["2b"]["Position"] = UDim2.new(0.2874, 0, 0.86222, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.clipboard.UICorner \\ --
+UI["2c"] = Instance.new("UICorner", UI["2b"])
+UI["2c"]["CornerRadius"] = UDim.new(0.15, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.clipboard.TextLabel \\ --
+UI["2d"] = Instance.new("TextLabel", UI["2b"])
+UI["2d"]["BorderSizePixel"] = 0
+UI["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2d"]["TextSize"] = 18
+UI["2d"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2d"]["BackgroundTransparency"] = 1
+UI["2d"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2d"]["Text"] = [[CBoard]]
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.clipboard.UIStroke \\ --
+UI["2e"] = Instance.new("UIStroke", UI["2b"])
+UI["2e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+UI["2e"]["Thickness"] = 0.8
+UI["2e"]["Color"] = Color3.fromRGB(22, 24, 27)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Clear \\ --
+UI["2f"] = Instance.new("TextButton", UI["1e"])
+UI["2f"]["BorderSizePixel"] = 0
+UI["2f"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["2f"]["TextSize"] = 25
+UI["2f"]["TextColor3"] = Color3.fromRGB(221, 232, 255)
+UI["2f"]["BackgroundColor3"] = Color3.fromRGB(37, 39, 45)
+UI["2f"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["2f"]["Size"] = UDim2.new(0, 67, 0, 31)
+UI["2f"]["Name"] = [[Clear]]
+UI["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2f"]["Text"] = [[]]
+UI["2f"]["Position"] = UDim2.new(0.41684, 0, 0.86222, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Clear.UICorner \\ --
+UI["30"] = Instance.new("UICorner", UI["2f"])
+UI["30"]["CornerRadius"] = UDim.new(0.15, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Clear.TextLabel \\ --
+UI["31"] = Instance.new("TextLabel", UI["2f"])
+UI["31"]["BorderSizePixel"] = 0
+UI["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["31"]["TextSize"] = 18
+UI["31"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["31"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["31"]["BackgroundTransparency"] = 1
+UI["31"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["31"]["Text"] = [[Clear]]
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Clear.UIStroke \\ --
+UI["32"] = Instance.new("UIStroke", UI["2f"])
+UI["32"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+UI["32"]["Thickness"] = 0.8
+UI["32"]["Color"] = Color3.fromRGB(22, 24, 27)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Copy \\ --
+UI["33"] = Instance.new("TextButton", UI["1e"])
+UI["33"]["BorderSizePixel"] = 0
+UI["33"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["33"]["TextSize"] = 25
+UI["33"]["TextColor3"] = Color3.fromRGB(221, 232, 255)
+UI["33"]["BackgroundColor3"] = Color3.fromRGB(37, 39, 45)
+UI["33"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["33"]["Size"] = UDim2.new(0, 67, 0, 31)
+UI["33"]["Name"] = [[Copy]]
+UI["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["33"]["Text"] = [[]]
+UI["33"]["Position"] = UDim2.new(0.54837, 0, 0.86196, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Copy.UICorner \\ --
+UI["34"] = Instance.new("UICorner", UI["33"])
+UI["34"]["CornerRadius"] = UDim.new(0.15, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Copy.TextLabel \\ --
+UI["35"] = Instance.new("TextLabel", UI["33"])
+UI["35"]["BorderSizePixel"] = 0
+UI["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["35"]["TextSize"] = 18
+UI["35"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["35"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["35"]["BackgroundTransparency"] = 1
+UI["35"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["35"]["Text"] = [[Copy]]
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Copy.UIStroke \\ --
+UI["36"] = Instance.new("UIStroke", UI["33"])
+UI["36"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+UI["36"]["Thickness"] = 0.8
+UI["36"]["Color"] = Color3.fromRGB(22, 24, 27)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Paste \\ --
+UI["37"] = Instance.new("TextButton", UI["1e"])
+UI["37"]["BorderSizePixel"] = 0
+UI["37"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["37"]["TextSize"] = 25
+UI["37"]["TextColor3"] = Color3.fromRGB(221, 232, 255)
+UI["37"]["BackgroundColor3"] = Color3.fromRGB(37, 39, 45)
+UI["37"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["37"]["Size"] = UDim2.new(0, 67, 0, 31)
+UI["37"]["Name"] = [[Paste]]
+UI["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["37"]["Text"] = [[]]
+UI["37"]["Position"] = UDim2.new(0.67937, 0, 0.86196, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Paste.UICorner \\ --
+UI["38"] = Instance.new("UICorner", UI["37"])
+UI["38"]["CornerRadius"] = UDim.new(0.15, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Paste.TextLabel \\ --
+UI["39"] = Instance.new("TextLabel", UI["37"])
+UI["39"]["BorderSizePixel"] = 0
+UI["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["39"]["TextSize"] = 18
+UI["39"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["39"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["39"]["BackgroundTransparency"] = 1
+UI["39"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["39"]["Text"] = [[Paste]]
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Paste.UIStroke \\ --
+UI["3a"] = Instance.new("UIStroke", UI["37"])
+UI["3a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+UI["3a"]["Thickness"] = 0.8
+UI["3a"]["Color"] = Color3.fromRGB(22, 24, 27)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Save \\ --
+UI["3b"] = Instance.new("TextButton", UI["1e"])
+UI["3b"]["BorderSizePixel"] = 0
+UI["3b"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["3b"]["TextSize"] = 25
+UI["3b"]["TextColor3"] = Color3.fromRGB(221, 232, 255)
+UI["3b"]["BackgroundColor3"] = Color3.fromRGB(37, 39, 45)
+UI["3b"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["3b"]["Size"] = UDim2.new(0, 67, 0, 31)
+UI["3b"]["Name"] = [[Save]]
+UI["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["3b"]["Text"] = [[]]
+UI["3b"]["Position"] = UDim2.new(0.81305, 0, 0.862, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Save.UICorner \\ --
+UI["3c"] = Instance.new("UICorner", UI["3b"])
+UI["3c"]["CornerRadius"] = UDim.new(0.15, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Save.TextLabel \\ --
+UI["3d"] = Instance.new("TextLabel", UI["3b"])
+UI["3d"]["BorderSizePixel"] = 0
+UI["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["3d"]["TextSize"] = 18
+UI["3d"]["FontFace"] = Font.new([[rbxassetid://11702779409]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["3d"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["3d"]["BackgroundTransparency"] = 1
+UI["3d"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["3d"]["Text"] = [[Save]]
+
+-- // StarterGui.Arcadia.MAIN.frames.executor.Executor.Save.UIStroke \\ --
+UI["3e"] = Instance.new("UIStroke", UI["3b"])
+UI["3e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+UI["3e"]["Thickness"] = 0.8
+UI["3e"]["Color"] = Color3.fromRGB(22, 24, 27)
+
+-- // StarterGui.Arcadia.MAIN.frames.UIAspectRatioConstraint \\ --
+UI["3f"] = Instance.new("UIAspectRatioConstraint", UI["1a"])
+UI["3f"]["AspectRatio"] = 2.14982
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts \\ --
+UI["40"] = Instance.new("Frame", UI["1a"])
+UI["40"]["Visible"] = false
+UI["40"]["BorderSizePixel"] = 0
+UI["40"]["BackgroundColor3"] = Color3.fromRGB(17, 16, 17)
+UI["40"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["40"]["Position"] = UDim2.new(0, 0, -0.00231, 0)
+UI["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["40"]["Name"] = [[scripts]]
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.UICorner \\ --
+UI["41"] = Instance.new("UICorner", UI["40"])
+
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.search \\ --
+UI["42"] = Instance.new("Frame", UI["40"])
+UI["42"]["BorderSizePixel"] = 0
+UI["42"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["42"]["Size"] = UDim2.new(0.98851, 0, 0.07728, 0)
+UI["42"]["Position"] = UDim2.new(0.01041, 0, 0.02471, 0)
+UI["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["42"]["Name"] = [[search]]
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.search.TextLabel \\ --
+UI["43"] = Instance.new("TextLabel", UI["42"])
+UI["43"]["TextWrapped"] = true
+UI["43"]["BorderSizePixel"] = 0
+UI["43"]["TextScaled"] = true
+UI["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["43"]["TextSize"] = 22
+UI["43"]["TextColor3"] = Color3.fromRGB(133, 132, 133)
+UI["43"]["BackgroundTransparency"] = 1
+UI["43"]["Size"] = UDim2.new(0.28738, 0, 1, 0)
+UI["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["43"]["Text"] = [[scripts provided by scriptblox.com]]
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.search.TextLabel.UITextSizeConstraint \\ --
+UI["44"] = Instance.new("UITextSizeConstraint", UI["43"])
+UI["44"]["MaxTextSize"] = 22
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.search.TextBox \\ --
+UI["45"] = Instance.new("TextBox", UI["42"])
+UI["45"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["45"]["BorderSizePixel"] = 0
+UI["45"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["45"]["TextWrapped"] = true
+UI["45"]["TextSize"] = 15
+UI["45"]["TextScaled"] = true
+UI["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["45"]["ClipsDescendants"] = true
+UI["45"]["PlaceholderText"] = [[type game name!]]
+UI["45"]["Size"] = UDim2.new(0.19601, 0, 0.95, 0)
+UI["45"]["Position"] = UDim2.new(0.75415, 0, 0.01265, 0)
+UI["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["45"]["Text"] = [[]]
+UI["45"]["BackgroundTransparency"] = 1
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.search.TextBox.UITextSizeConstraint \\ --
+UI["46"] = Instance.new("UITextSizeConstraint", UI["45"])
+UI["46"]["MaxTextSize"] = 10
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.search.ImageButton \\ --
+UI["47"] = Instance.new("ImageButton", UI["42"])
+UI["47"]["BorderSizePixel"] = 0
+UI["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["47"]["Image"] = [[rbxassetid://15115310494]]
+UI["47"]["Size"] = UDim2.new(0.02492, 0, 0.75, 0)
+UI["47"]["BackgroundTransparency"] = 1
+UI["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["47"]["Position"] = UDim2.new(0.95797, 0, 0.0697, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.search.Frame \\ --
+UI["48"] = Instance.new("Frame", UI["42"])
+UI["48"]["BorderSizePixel"] = 0
+UI["48"]["BackgroundColor3"] = Color3.fromRGB(160, 160, 160)
+UI["48"]["Size"] = UDim2.new(0.19601, 0, 0.05, 0)
+UI["48"]["Position"] = UDim2.new(0.754, 0, 0.94, 0)
+UI["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame \\ --
+UI["49"] = Instance.new("ScrollingFrame", UI["40"])
+UI["49"]["Active"] = true
+UI["49"]["BorderSizePixel"] = 0
+UI["49"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["49"]["Size"] = UDim2.new(0.98308, 0, 0.86987, 0)
+UI["49"]["Position"] = UDim2.new(0.01041, 0, 0.10199, 0)
+UI["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["49"]["ScrollBarThickness"] = 9
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder \\ --
+UI["4a"] = Instance.new("Folder", UI["49"])
+
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame \\ --
+UI["4b"] = Instance.new("Frame", UI["4a"])
+UI["4b"]["Visible"] = false
+UI["4b"]["BorderSizePixel"] = 0
+UI["4b"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21)
+UI["4b"]["Size"] = UDim2.new(0, 175, 0, 150)
+UI["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.UICorner \\ --
+UI["4c"] = Instance.new("UICorner", UI["4b"])
+
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.ImageLabel \\ --
+UI["4d"] = Instance.new("ImageLabel", UI["4b"])
+UI["4d"]["BorderSizePixel"] = 0
+UI["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["4d"]["ImageTransparency"] = 0.4
+UI["4d"]["Image"] = [[rbxassetid://15117873611]]
+UI["4d"]["Size"] = UDim2.new(1, 0, 0.66842, 0)
+UI["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["4d"]["BackgroundTransparency"] = 1
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.ImageLabel.UICorner \\ --
+UI["4e"] = Instance.new("UICorner", UI["4d"])
+
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.gg9 \\ --
+UI["4f"] = Instance.new("ImageButton", UI["4b"])
+UI["4f"]["BorderSizePixel"] = 0
+UI["4f"]["SliceScale"] = 0
+UI["4f"]["BackgroundColor3"] = Color3.fromRGB(151, 3, 255)
+UI["4f"]["Image"] = [[rbxassetid://15115194626]]
+UI["4f"]["Size"] = UDim2.new(0.16316, 0, 0.15789, 0)
+UI["4f"]["Name"] = [[gg9]]
+UI["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["4f"]["Position"] = UDim2.new(0.78689, 0, 0.76561, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.gg9.UICorner \\ --
+UI["50"] = Instance.new("UICorner", UI["4f"])
+
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.TextLabel \\ --
+UI["51"] = Instance.new("TextLabel", UI["4b"])
+UI["51"]["TextWrapped"] = true
+UI["51"]["BorderSizePixel"] = 0
+UI["51"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["51"]["TextScaled"] = true
+UI["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["51"]["TextSize"] = 20
+UI["51"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["51"]["BackgroundTransparency"] = 1
+UI["51"]["Size"] = UDim2.new(0.65263, 0, 0.10526, 0)
+UI["51"]["ClipsDescendants"] = true
+UI["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["51"]["Text"] = [[Evon Hub BLux Fruit]]
+UI["51"]["Position"] = UDim2.new(0.06354, 0, 0.66175, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.Folder.Frame.TextLabel.UITextSizeConstraint \\ --
+UI["52"] = Instance.new("UITextSizeConstraint", UI["51"])
+UI["52"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.scripts.ScrollingFrame.UIGridLayout \\ --
+UI["53"] = Instance.new("UIGridLayout", UI["49"])
+UI["53"]["CellSize"] = UDim2.new(0.32, 0, 0.32, 0)
+UI["53"]["SortOrder"] = Enum.SortOrder.LayoutOrder
+UI["53"]["CellPadding"] = UDim2.new(0, 10, 0, 5)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings \\ --
+UI["54"] = Instance.new("Frame", UI["1a"])
+UI["54"]["Visible"] = false
+UI["54"]["BorderSizePixel"] = 0
+UI["54"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["54"]["Size"] = UDim2.new(1, 0, 1.00346, 0)
+UI["54"]["Position"] = UDim2.new(0, 0, -0.00231, 0)
+UI["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["54"]["Name"] = [[settings]]
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.UICorner \\ --
+UI["55"] = Instance.new("UICorner", UI["54"])
+
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language \\ --
+UI["56"] = Instance.new("Frame", UI["54"])
+UI["56"]["BorderSizePixel"] = 0
+UI["56"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["56"]["Size"] = UDim2.new(0.33662, 0, 0.92759, 0)
+UI["56"]["Position"] = UDim2.new(0.61576, 0, 0.03448, 0)
+UI["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["56"]["Name"] = [[language]]
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.lol \\ --
+UI["57"] = Instance.new("TextLabel", UI["56"])
+UI["57"]["TextWrapped"] = true
+UI["57"]["BorderSizePixel"] = 0
+UI["57"]["TextScaled"] = true
+UI["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["57"]["TextSize"] = 20
+UI["57"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["57"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["57"]["BackgroundTransparency"] = 1
+UI["57"]["Size"] = UDim2.new(0.99512, 0, 0.07435, 0)
+UI["57"]["ClipsDescendants"] = true
+UI["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["57"]["Text"] = [[Executor Language]]
+UI["57"]["Name"] = [[lol]]
+UI["57"]["Position"] = UDim2.new(0, 0, -0.00072, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.lol.UITextSizeConstraint \\ --
+UI["58"] = Instance.new("UITextSizeConstraint", UI["57"])
+UI["58"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame \\ --
+UI["59"] = Instance.new("Frame", UI["56"])
+UI["59"]["BorderSizePixel"] = 0
+UI["59"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["59"]["Size"] = UDim2.new(0.518, 0, 0.83643, 0)
+UI["59"]["Position"] = UDim2.new(0.2381, 0, 0.10197, 0)
+UI["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.English \\ --
+UI["5a"] = Instance.new("TextButton", UI["59"])
+UI["5a"]["TextWrapped"] = true
+UI["5a"]["TextStrokeTransparency"] = 0
+UI["5a"]["BorderSizePixel"] = 0
+UI["5a"]["TextSize"] = 30
+UI["5a"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["5a"]["TextScaled"] = true
+UI["5a"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["5a"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["5a"]["Size"] = UDim2.new(0.4077, 0, 0.09143, 0)
+UI["5a"]["Name"] = [[English]]
+UI["5a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["5a"]["Text"] = [[English]]
+UI["5a"]["Position"] = UDim2.new(0.04573, 0, 0.03236, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.English.UITextSizeConstraint \\ --
+UI["5b"] = Instance.new("UITextSizeConstraint", UI["5a"])
+UI["5b"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Chinese \\ --
+UI["5c"] = Instance.new("TextButton", UI["59"])
+UI["5c"]["TextWrapped"] = true
+UI["5c"]["TextStrokeTransparency"] = 0
+UI["5c"]["BorderSizePixel"] = 0
+UI["5c"]["TextSize"] = 30
+UI["5c"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["5c"]["TextScaled"] = true
+UI["5c"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["5c"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["5c"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["5c"]["Name"] = [[Chinese]]
+UI["5c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["5c"]["Text"] = [[Chinese]]
+UI["5c"]["Position"] = UDim2.new(0.55485, 0, 0.69268, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Chinese.UITextSizeConstraint \\ --
+UI["5d"] = Instance.new("UITextSizeConstraint", UI["5c"])
+UI["5d"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Spanish \\ --
+UI["5e"] = Instance.new("TextButton", UI["59"])
+UI["5e"]["TextWrapped"] = true
+UI["5e"]["TextStrokeTransparency"] = 0
+UI["5e"]["BorderSizePixel"] = 0
+UI["5e"]["TextSize"] = 30
+UI["5e"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["5e"]["TextScaled"] = true
+UI["5e"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["5e"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["5e"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["5e"]["Name"] = [[Spanish]]
+UI["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["5e"]["Text"] = [[Spanish]]
+UI["5e"]["Position"] = UDim2.new(0.55485, 0, 0.29649, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Spanish.UITextSizeConstraint \\ --
+UI["5f"] = Instance.new("UITextSizeConstraint", UI["5e"])
+UI["5f"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Arabic \\ --
+UI["60"] = Instance.new("TextButton", UI["59"])
+UI["60"]["TextWrapped"] = true
+UI["60"]["TextStrokeTransparency"] = 0
+UI["60"]["BorderSizePixel"] = 0
+UI["60"]["TextSize"] = 30
+UI["60"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["60"]["TextScaled"] = true
+UI["60"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["60"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["60"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["60"]["Name"] = [[Arabic]]
+UI["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["60"]["Text"] = [[Arabic]]
+UI["60"]["Position"] = UDim2.new(0.03871, 0, 0.16443, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Arabic.UITextSizeConstraint \\ --
+UI["61"] = Instance.new("UITextSizeConstraint", UI["60"])
+UI["61"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Hindi \\ --
+UI["62"] = Instance.new("TextButton", UI["59"])
+UI["62"]["TextWrapped"] = true
+UI["62"]["TextStrokeTransparency"] = 0
+UI["62"]["BorderSizePixel"] = 0
+UI["62"]["TextSize"] = 30
+UI["62"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["62"]["TextScaled"] = true
+UI["62"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["62"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["62"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["62"]["Name"] = [[Hindi]]
+UI["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["62"]["Text"] = [[Hindi]]
+UI["62"]["Position"] = UDim2.new(0.55485, 0, 0.4184, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Hindi.UITextSizeConstraint \\ --
+UI["63"] = Instance.new("UITextSizeConstraint", UI["62"])
+UI["63"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.French \\ --
+UI["64"] = Instance.new("TextButton", UI["59"])
+UI["64"]["TextWrapped"] = true
+UI["64"]["TextStrokeTransparency"] = 0
+UI["64"]["BorderSizePixel"] = 0
+UI["64"]["TextSize"] = 30
+UI["64"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["64"]["TextScaled"] = true
+UI["64"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["64"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["64"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["64"]["Name"] = [[French]]
+UI["64"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["64"]["Text"] = [[French]]
+UI["64"]["Position"] = UDim2.new(0.03871, 0, 0.69268, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.French.UITextSizeConstraint \\ --
+UI["65"] = Instance.new("UITextSizeConstraint", UI["64"])
+UI["65"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Russian \\ --
+UI["66"] = Instance.new("TextButton", UI["59"])
+UI["66"]["TextWrapped"] = true
+UI["66"]["TextStrokeTransparency"] = 0
+UI["66"]["BorderSizePixel"] = 0
+UI["66"]["TextSize"] = 30
+UI["66"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["66"]["TextScaled"] = true
+UI["66"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["66"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["66"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["66"]["Name"] = [[Russian]]
+UI["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["66"]["Text"] = [[Russian]]
+UI["66"]["Position"] = UDim2.new(0.04776, 0, 0.83491, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Russian.UITextSizeConstraint \\ --
+UI["67"] = Instance.new("UITextSizeConstraint", UI["66"])
+UI["67"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Bengali \\ --
+UI["68"] = Instance.new("TextButton", UI["59"])
+UI["68"]["TextWrapped"] = true
+UI["68"]["TextStrokeTransparency"] = 0
+UI["68"]["BorderSizePixel"] = 0
+UI["68"]["TextSize"] = 30
+UI["68"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["68"]["TextScaled"] = true
+UI["68"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["68"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["68"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["68"]["Name"] = [[Bengali]]
+UI["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["68"]["Text"] = [[Bengali]]
+UI["68"]["Position"] = UDim2.new(0.55485, 0, 0.55554, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Bengali.UITextSizeConstraint \\ --
+UI["69"] = Instance.new("UITextSizeConstraint", UI["68"])
+UI["69"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Portuguese \\ --
+UI["6a"] = Instance.new("TextButton", UI["59"])
+UI["6a"]["TextWrapped"] = true
+UI["6a"]["TextStrokeTransparency"] = 0
+UI["6a"]["BorderSizePixel"] = 0
+UI["6a"]["TextSize"] = 30
+UI["6a"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["6a"]["TextScaled"] = true
+UI["6a"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["6a"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["6a"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["6a"]["Name"] = [[Portuguese]]
+UI["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["6a"]["Text"] = [[Portuguese]]
+UI["6a"]["Position"] = UDim2.new(0.55485, 0, 0.16443, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Portuguese.UITextSizeConstraint \\ --
+UI["6b"] = Instance.new("UITextSizeConstraint", UI["6a"])
+UI["6b"]["MaxTextSize"] = 14
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.German \\ --
+UI["6c"] = Instance.new("TextButton", UI["59"])
+UI["6c"]["TextWrapped"] = true
+UI["6c"]["TextStrokeTransparency"] = 0
+UI["6c"]["BorderSizePixel"] = 0
+UI["6c"]["TextSize"] = 30
+UI["6c"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["6c"]["TextScaled"] = true
+UI["6c"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["6c"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["6c"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["6c"]["Name"] = [[German]]
+UI["6c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["6c"]["Text"] = [[German]]
+UI["6c"]["Position"] = UDim2.new(0.04776, 0, 0.4184, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.German.UITextSizeConstraint \\ --
+UI["6d"] = Instance.new("UITextSizeConstraint", UI["6c"])
+UI["6d"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Japanese \\ --
+UI["6e"] = Instance.new("TextButton", UI["59"])
+UI["6e"]["TextWrapped"] = true
+UI["6e"]["TextStrokeTransparency"] = 0
+UI["6e"]["BorderSizePixel"] = 0
+UI["6e"]["TextSize"] = 30
+UI["6e"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["6e"]["TextScaled"] = true
+UI["6e"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["6e"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["6e"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["6e"]["Name"] = [[Japanese]]
+UI["6e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["6e"]["Text"] = [[Japanese]]
+UI["6e"]["Position"] = UDim2.new(0.03871, 0, 0.55554, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Japanese.UITextSizeConstraint \\ --
+UI["6f"] = Instance.new("UITextSizeConstraint", UI["6e"])
+UI["6f"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Korean \\ --
+UI["70"] = Instance.new("TextButton", UI["59"])
+UI["70"]["TextWrapped"] = true
+UI["70"]["TextStrokeTransparency"] = 0
+UI["70"]["BorderSizePixel"] = 0
+UI["70"]["TextSize"] = 30
+UI["70"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["70"]["TextScaled"] = true
+UI["70"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["70"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["70"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["70"]["Name"] = [[Korean]]
+UI["70"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["70"]["Text"] = [[Korean]]
+UI["70"]["Position"] = UDim2.new(0.03871, 0, 0.29649, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Korean.UITextSizeConstraint \\ --
+UI["71"] = Instance.new("UITextSizeConstraint", UI["70"])
+UI["71"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Swahili \\ --
+UI["72"] = Instance.new("TextButton", UI["59"])
+UI["72"]["TextWrapped"] = true
+UI["72"]["TextStrokeTransparency"] = 0
+UI["72"]["BorderSizePixel"] = 0
+UI["72"]["TextSize"] = 30
+UI["72"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["72"]["TextScaled"] = true
+UI["72"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["72"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["72"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["72"]["Name"] = [[Swahili]]
+UI["72"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["72"]["Text"] = [[Swahili]]
+UI["72"]["Position"] = UDim2.new(0.55485, 0, 0.83491, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Swahili.UITextSizeConstraint \\ --
+UI["73"] = Instance.new("UITextSizeConstraint", UI["72"])
+UI["73"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Marathi \\ --
+UI["74"] = Instance.new("TextButton", UI["59"])
+UI["74"]["TextWrapped"] = true
+UI["74"]["TextStrokeTransparency"] = 0
+UI["74"]["BorderSizePixel"] = 0
+UI["74"]["TextSize"] = 30
+UI["74"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["74"]["TextScaled"] = true
+UI["74"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["74"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["74"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["74"]["Name"] = [[Marathi]]
+UI["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["74"]["Text"] = [[Marathi]]
+UI["74"]["Position"] = UDim2.new(0.2832, 0, 0.98221, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Marathi.UITextSizeConstraint \\ --
+UI["75"] = Instance.new("UITextSizeConstraint", UI["74"])
+UI["75"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Turkish \\ --
+UI["76"] = Instance.new("TextButton", UI["59"])
+UI["76"]["TextWrapped"] = true
+UI["76"]["TextStrokeTransparency"] = 0
+UI["76"]["BorderSizePixel"] = 0
+UI["76"]["TextSize"] = 30
+UI["76"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["76"]["TextScaled"] = true
+UI["76"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["76"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["76"]["Size"] = UDim2.new(0.40748, 0, 0.09143, 0)
+UI["76"]["Name"] = [[Turkish]]
+UI["76"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["76"]["Text"] = [[Turkish]]
+UI["76"]["Position"] = UDim2.new(0.55485, 0, 0.03236, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.Frame.Turkish.UITextSizeConstraint \\ --
+UI["77"] = Instance.new("UITextSizeConstraint", UI["76"])
+UI["77"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.language.gg9 \\ --
+UI["78"] = Instance.new("Frame", UI["56"])
+UI["78"]["BorderSizePixel"] = 0
+UI["78"]["BackgroundColor3"] = Color3.fromRGB(135, 46, 204)
+UI["78"]["Size"] = UDim2.new(0.47317, 0, 0.01115, 0)
+UI["78"]["Position"] = UDim2.new(0.26341, 0, 0.0713, 0)
+UI["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["78"]["Name"] = [[gg9]]
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color \\ --
+UI["79"] = Instance.new("Frame", UI["54"])
+UI["79"]["BorderSizePixel"] = 0
+UI["79"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["79"]["Size"] = UDim2.new(0.33662, 0, 0.72414, 0)
+UI["79"]["Position"] = UDim2.new(0.07061, 0, 0.07586, 0)
+UI["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["79"]["Name"] = [[color]]
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.Frame \\ --
+UI["7a"] = Instance.new("Frame", UI["79"])
+UI["7a"]["BorderSizePixel"] = 0
+UI["7a"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["7a"]["Size"] = UDim2.new(0.56331, 0, 1.14822, 0)
+UI["7a"]["Position"] = UDim2.new(0.21371, 0, 0.07559, 0)
+UI["7a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ColorWheel_LocalScript \\ --
+UI["7b"] = Instance.new("LocalScript", UI["7a"])
+UI["7b"]["Name"] = [[ColorWheel_LocalScript]]
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.Frame.Frame \\ --
+UI["7c"] = Instance.new("Frame", UI["7a"])
+UI["7c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["7c"]["Size"] = UDim2.new(0.30928, 0, 0.12444, 0)
+UI["7c"]["Position"] = UDim2.new(0.3295, 0, 0.61254, 0)
+UI["7c"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.Frame.Frame.UICorner \\ --
+UI["7d"] = Instance.new("UICorner", UI["7c"])
+
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ColorWheel \\ --
+UI["7e"] = Instance.new("ImageButton", UI["7a"])
+UI["7e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["7e"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
+UI["7e"]["Image"] = [[rbxassetid://11224004075]]
+UI["7e"]["Size"] = UDim2.new(1.03093, 0, 0.44444, 0)
+UI["7e"]["BackgroundTransparency"] = 1
+UI["7e"]["Name"] = [[ColorWheel]]
+UI["7e"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+UI["7e"]["Position"] = UDim2.new(0.49681, 0, 0.33628, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ColorWheel.Cursor \\ --
+UI["7f"] = Instance.new("ImageLabel", UI["7e"])
+UI["7f"]["ZIndex"] = 4
+UI["7f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["7f"]["AnchorPoint"] = Vector2.new(0.5, 0.5)
+UI["7f"]["Image"] = [[rbxassetid://11226149359]]
+UI["7f"]["Size"] = UDim2.new(0.15, 0, 0.15, 0)
+UI["7f"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+UI["7f"]["BackgroundTransparency"] = 1
+UI["7f"]["Name"] = [[Cursor]]
+UI["7f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ValueSelector \\ --
+UI["80"] = Instance.new("TextButton", UI["7a"])
+UI["80"]["Active"] = false
+UI["80"]["AutoButtonColor"] = false
+UI["80"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["80"]["Selectable"] = false
+UI["80"]["Size"] = UDim2.new(0.30928, 0, 0.44444, 0)
+UI["80"]["Name"] = [[ValueSelector]]
+UI["80"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+UI["80"]["Text"] = [[]]
+UI["80"]["Position"] = UDim2.new(-0.45175, 0, 0.12422, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ValueSelector.UIGradient \\ --
+UI["81"] = Instance.new("UIGradient", UI["80"])
+UI["81"]["Rotation"] = -90
+UI["81"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))}
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ValueSelector.UIStroke \\ --
+UI["82"] = Instance.new("UIStroke", UI["80"])
+UI["82"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ValueSelector.Cursor \\ --
+UI["83"] = Instance.new("Frame", UI["80"])
+UI["83"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["83"]["Size"] = UDim2.new(1, 0, 0.05, 0)
+UI["83"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+UI["83"]["Name"] = [[Cursor]]
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.gg9 \\ --
+UI["84"] = Instance.new("Frame", UI["79"])
+UI["84"]["BorderSizePixel"] = 0
+UI["84"]["BackgroundColor3"] = Color3.fromRGB(135, 46, 204)
+UI["84"]["Size"] = UDim2.new(0.47317, 0, 0.01429, 0)
+UI["84"]["Position"] = UDim2.new(0.25854, 0, 0.0329, 0)
+UI["84"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["84"]["Name"] = [[gg9]]
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.lol2 \\ --
+UI["85"] = Instance.new("TextButton", UI["79"])
+UI["85"]["TextWrapped"] = true
+UI["85"]["TextStrokeTransparency"] = 0
+UI["85"]["BorderSizePixel"] = 0
+UI["85"]["TextSize"] = 22
+UI["85"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["85"]["TextScaled"] = true
+UI["85"]["BackgroundColor3"] = Color3.fromRGB(22, 20, 22)
+UI["85"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["85"]["Size"] = UDim2.new(0.42439, 0, 0.08571, 0)
+UI["85"]["Name"] = [[lol2]]
+UI["85"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["85"]["Text"] = [[back to normal]]
+UI["85"]["Position"] = UDim2.new(0.28713, 0, 0.07133, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.lol2.UITextSizeConstraint \\ --
+UI["86"] = Instance.new("UITextSizeConstraint", UI["85"])
+UI["86"]["MaxTextSize"] = 22
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.lol \\ --
+UI["87"] = Instance.new("TextLabel", UI["79"])
+UI["87"]["TextWrapped"] = true
+UI["87"]["BorderSizePixel"] = 0
+UI["87"]["TextScaled"] = true
+UI["87"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["87"]["TextSize"] = 20
+UI["87"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["87"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["87"]["BackgroundTransparency"] = 1
+UI["87"]["Size"] = UDim2.new(0.99512, 0, 0.09524, 0)
+UI["87"]["ClipsDescendants"] = true
+UI["87"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["87"]["Text"] = [[Executor Color]]
+UI["87"]["Name"] = [[lol]]
+UI["87"]["Position"] = UDim2.new(0, 0, -0.06263, 0)
+
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.lol.UITextSizeConstraint \\ --
+UI["88"] = Instance.new("UITextSizeConstraint", UI["87"])
+UI["88"]["MaxTextSize"] = 20
+
+-- // StarterGui.Arcadia.MAIN.UICorner \\ --
+UI["89"] = Instance.new("UICorner", UI["b"])
+
+
+-- // StarterGui.Arcadia.MAIN.UIStroke \\ --
+UI["8a"] = Instance.new("UIStroke", UI["b"])
+UI["8a"]["Transparency"] = 0.8
+UI["8a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border
+UI["8a"]["Thickness"] = 5
+
+-- // StarterGui.Arcadia.MAIN.Corners \\ --
+UI["8b"] = Instance.new("Folder", UI["b"])
+UI["8b"]["Name"] = [[Corners]]
+
+-- // StarterGui.Arcadia.MAIN.Corners.10 \\ --
+UI["8c"] = Instance.new("TextButton", UI["8b"])
+UI["8c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["8c"]["BorderMode"] = Enum.BorderMode.Inset
+UI["8c"]["Selectable"] = false
+UI["8c"]["ZIndex"] = 5
+UI["8c"]["AnchorPoint"] = Vector2.new(1, 0)
+UI["8c"]["Size"] = UDim2.new(0, 15, 0, 15)
+UI["8c"]["Name"] = [[10]]
+UI["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["8c"]["Text"] = [[]]
+UI["8c"]["Visible"] = false
+UI["8c"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton
+UI["8c"]["Position"] = UDim2.new(0, 0, 1, 0)
+
+-- // StarterGui.Arcadia.MAIN.Corners.11 \\ --
+UI["8d"] = Instance.new("TextButton", UI["8b"])
+UI["8d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["8d"]["BorderMode"] = Enum.BorderMode.Inset
+UI["8d"]["Selectable"] = false
+UI["8d"]["ZIndex"] = 5
+UI["8d"]["AnchorPoint"] = Vector2.new(1, 1)
+UI["8d"]["Size"] = UDim2.new(0, 15, 0, 15)
+UI["8d"]["Name"] = [[11]]
+UI["8d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["8d"]["Text"] = [[]]
+UI["8d"]["Visible"] = false
+UI["8d"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton
+
+-- // StarterGui.Arcadia.MAIN.Corners.01 \\ --
+UI["8e"] = Instance.new("TextButton", UI["8b"])
+UI["8e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["8e"]["BorderMode"] = Enum.BorderMode.Inset
+UI["8e"]["Selectable"] = false
+UI["8e"]["ZIndex"] = 5
+UI["8e"]["AnchorPoint"] = Vector2.new(0, 1)
+UI["8e"]["Size"] = UDim2.new(0, 15, 0, 15)
+UI["8e"]["Name"] = [[01]]
+UI["8e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["8e"]["Text"] = [[]]
+UI["8e"]["Visible"] = false
+UI["8e"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton
+UI["8e"]["Position"] = UDim2.new(1, 0, 0, 0)
+
+-- // StarterGui.Arcadia.MAIN.Corners.00 \\ --
+UI["8f"] = Instance.new("TextButton", UI["8b"])
+UI["8f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["8f"]["BorderMode"] = Enum.BorderMode.Inset
+UI["8f"]["Selectable"] = false
+UI["8f"]["ZIndex"] = 5
+UI["8f"]["Size"] = UDim2.new(0, 15, 0, 15)
+UI["8f"]["Name"] = [[00]]
+UI["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["8f"]["Text"] = [[]]
+UI["8f"]["Visible"] = false
+UI["8f"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton
+UI["8f"]["Position"] = UDim2.new(1, 0, 1, 0)
+
+-- // StarterGui.Arcadia.MAIN.UISizeConstraint \\ --
+UI["90"] = Instance.new("UISizeConstraint", UI["b"])
+UI["90"]["MinSize"] = Vector2.new(200, 200)
+
+-- // StarterGui.Arcadia.MAIN.Up \\ --
+UI["91"] = Instance.new("TextButton", UI["b"])
+UI["91"]["BorderSizePixel"] = 0
+UI["91"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["91"]["BorderMode"] = Enum.BorderMode.Inset
+UI["91"]["Selectable"] = false
+UI["91"]["AnchorPoint"] = Vector2.new(0.5, 1)
+UI["91"]["Size"] = UDim2.new(0, 15, 0, 15)
+UI["91"]["Name"] = [[Up]]
+UI["91"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["91"]["Text"] = [[]]
+UI["91"]["Visible"] = false
+UI["91"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton
+UI["91"]["Position"] = UDim2.new(0.5, 0, 0, 0)
+
+-- // StarterGui.Arcadia.MAIN.Left \\ --
+UI["92"] = Instance.new("TextButton", UI["b"])
+UI["92"]["BorderSizePixel"] = 0
+UI["92"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["92"]["BorderMode"] = Enum.BorderMode.Inset
+UI["92"]["Selectable"] = false
+UI["92"]["AnchorPoint"] = Vector2.new(1, 0.5)
+UI["92"]["Size"] = UDim2.new(0, 15, 0, 15)
+UI["92"]["Name"] = [[Left]]
+UI["92"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["92"]["Text"] = [[]]
+UI["92"]["Visible"] = false
+UI["92"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton
+UI["92"]["Position"] = UDim2.new(0, 0, 0.5, 0)
+
+-- // StarterGui.Arcadia.MAIN.Right \\ --
+UI["93"] = Instance.new("TextButton", UI["b"])
+UI["93"]["BorderSizePixel"] = 0
+UI["93"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["93"]["BorderMode"] = Enum.BorderMode.Inset
+UI["93"]["Selectable"] = false
+UI["93"]["AnchorPoint"] = Vector2.new(0, 0.5)
+UI["93"]["Size"] = UDim2.new(0, 15, 0, 15)
+UI["93"]["Name"] = [[Right]]
+UI["93"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["93"]["Text"] = [[]]
+UI["93"]["Visible"] = false
+UI["93"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton
+UI["93"]["Position"] = UDim2.new(1, 0, 0.5, 0)
+
+-- // StarterGui.Arcadia.MAIN.Down \\ --
+UI["94"] = Instance.new("TextButton", UI["b"])
+UI["94"]["BorderSizePixel"] = 0
+UI["94"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["94"]["BorderMode"] = Enum.BorderMode.Inset
+UI["94"]["Selectable"] = false
+UI["94"]["AnchorPoint"] = Vector2.new(0.5, 0)
+UI["94"]["Size"] = UDim2.new(0, 15, 0, 15)
+UI["94"]["Name"] = [[Down]]
+UI["94"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["94"]["Text"] = [[]]
+UI["94"]["Visible"] = false
+UI["94"]["Style"] = Enum.ButtonStyle.RobloxRoundDropdownButton
+UI["94"]["Position"] = UDim2.new(0.5, 0, 1, 0)
+
+-- // StarterGui.Arcadia.MAIN.UIAspectRatioConstraint \\ --
+UI["95"] = Instance.new("UIAspectRatioConstraint", UI["b"])
+UI["95"]["AspectRatio"] = 1.91169
+
+-- // StarterGui.Arcadia.MAIN.gg9 \\ --
+UI["96"] = Instance.new("ImageLabel", UI["b"])
+UI["96"]["ZIndex"] = 0
+UI["96"]["BorderSizePixel"] = 0
+UI["96"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["96"]["ImageTransparency"] = 0.9
+UI["96"]["ImageColor3"] = Color3.fromRGB(106, 55, 120)
+UI["96"]["Image"] = [[rbxassetid://15114678644]]
+UI["96"]["Size"] = UDim2.new(1.12479, 0, 1.15077, 0)
+UI["96"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["96"]["BackgroundTransparency"] = 1
+UI["96"]["Name"] = [[gg9]]
+UI["96"]["Position"] = UDim2.new(-0.05824, 0, -0.07614, 0)
+
+-- // StarterGui.Arcadia.MAIN.topbar \\ --
+UI["97"] = Instance.new("Frame", UI["b"])
+UI["97"]["BorderSizePixel"] = 0
+UI["97"]["BackgroundColor3"] = Color3.fromRGB(23, 25, 28)
+UI["97"]["Size"] = UDim2.new(1, 0, 0.02256, 0)
+UI["97"]["Position"] = UDim2.new(-0, 0, 0.107, 0)
+UI["97"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["97"]["Name"] = [[topbar]]
+
+-- // StarterGui.Arcadia.MAIN.topbar.UICorner \\ --
+UI["98"] = Instance.new("UICorner", UI["97"])
+UI["98"]["CornerRadius"] = UDim.new(0, 5)
+
+-- // StarterGui.Arcadia.ImageButton \\ --
+UI["99"] = Instance.new("ImageButton", UI["1"])
+UI["99"]["BorderSizePixel"] = 0
+UI["99"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["99"]["Image"] = [[rbxassetid://15204016915]]
+UI["99"]["Size"] = UDim2.new(0, 100, 0, 100)
+UI["99"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["99"]["Visible"] = false
 
 -- Require G2L wrapper
 local G2L_REQUIRE = require;
@@ -1580,9 +1421,10 @@ local function require(Module:ModuleScript)
     return G2L_REQUIRE(Module);
 end
 
-G2L_MODULES[G2L["5"]] = {
+G2L_MODULES[UI["5"]] = {
 Closure = function()
-    local script = G2L["5"];local types = require(script.types)
+    local script = UI["5"]
+local types = require(script.types)
 local utility = require(script.utility)
 local theme = require(script.theme)
 
@@ -1901,11 +1743,12 @@ end
 
 return Highlighter
 
-end;
-};
-G2L_MODULES[G2L["6"]] = {
+end
+}
+G2L_MODULES[UI["6"]] = {
 Closure = function()
-    local script = G2L["6"];--[=[
+    local script = UI["6"]
+--[=[
 	Lexical scanner for creating a sequence of tokens from Lua source code.
 	This is a heavily modified and Roblox-optimized version of
 	the original Penlight Lexer module:
@@ -2231,11 +2074,12 @@ end
 
 return lexer
 
-end;
-};
-G2L_MODULES[G2L["7"]] = {
+end
+}
+G2L_MODULES[UI["7"]] = {
 Closure = function()
-    local script = G2L["7"];local language = {
+    local script = UI["7"]
+local language = {
 	keyword = {
 		["and"] = "keyword",
 		["break"] = "keyword",
@@ -2771,11 +2615,12 @@ end
 
 return language
 
-end;
-};
-G2L_MODULES[G2L["8"]] = {
+end
+}
+G2L_MODULES[UI["8"]] = {
 Closure = function()
-    local script = G2L["8"];local DEFAULT_TOKEN_COLORS = {
+    local script = UI["8"]
+local DEFAULT_TOKEN_COLORS = {
 	["background"] = Color3.fromRGB(163, 121, 255),
 	["iden"] = Color3.fromRGB(230, 228, 255),
 	["keyword"] = Color3.fromRGB(114, 199, 255),
@@ -2846,11 +2691,12 @@ Theme.setColors(DEFAULT_TOKEN_COLORS)
 
 return Theme
 
-end;
-};
-G2L_MODULES[G2L["9"]] = {
+end
+}
+G2L_MODULES[UI["9"]] = {
 Closure = function()
-    local script = G2L["9"];export type TextObject = TextLabel | TextBox
+    local script = UI["9"]
+export type TextObject = TextLabel | TextBox
 
 export type TokenName =
 	"background"
@@ -2899,11 +2745,12 @@ export type ObjectData = {
 
 return nil
 
-end;
-};
-G2L_MODULES[G2L["a"]] = {
+end
+}
+G2L_MODULES[UI["a"]] = {
 Closure = function()
-    local script = G2L["a"];local types = require(script.Parent.types)
+    local script = UI["a"]
+local types = require(script.Parent.types)
 
 local Utility = {}
 
@@ -2955,24 +2802,24 @@ end
 
 return Utility
 
-end;
-};
--- StarterGui.Arcadia.LocalScript
-local function C_4()
-local script = G2L["4"];
+end
+}
+-- // StarterGui.Arcadia.LocalScript \\ --
+local function SCRIPT_4()
+local script = UI["4"]
 	--[[fix ui dupe
-	if Arcadia and not _G.Arcadia == true then
-		print("Arcadia is already running!")
+	if evon and not _G.evon == true then
+		print("Evon is already running!")
 		return
 	end
 	
-	pcall(function() getgenv().Arcadia = flase end)
+	pcall(function() getgenv().evon = flase end)
 	
 	COREGUI = game:GetService("CoreGui")
 	if not game:IsLoaded() then
 		local notLoaded = Instance.new("Message")
 		notLoaded.Parent = COREGUI
-		notLoaded.Text = 'waiting for the game to load to use Arcadia'
+		notLoaded.Text = 'waiting for the game to load to use evon'
 		game.Loaded:Wait()
 		notLoaded:Destroy()
 	end
@@ -3038,10 +2885,10 @@ local script = G2L["4"];
 	game:GetService("TweenService"):Create(main,TweenInfo.new(1),{Position=UDim2.new(0.248, 0,5, 0)}):Play()
 	game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=1}):Play()
 	--
-
+	
 	local textbox2 = script.Parent.MAIN.frames.executor.Executor.txtbox.EditorFrame.Source.Source2
 	local highligher = require(script.Highlighter)
-
+	
 	local TokenColors = {
 		["background"] = Color3.fromRGB(163, 121, 255),
 		["iden"] = Color3.fromRGB(144, 225, 255),
@@ -3648,7 +3495,7 @@ local script = G2L["4"];
 				gg9.Image = "rbxassetid://15115194626"
 				gg9.SliceScale = 0.000
 				gg9.MouseButton1Click:Connect(function()
-					loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/executer/main/infyieldArcadia.lua'))()
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/executer/main/infyieldevon.lua'))()
 				end)
 
 
@@ -3663,7 +3510,7 @@ local script = G2L["4"];
 				TextLabel.Position = UDim2.new(0.00640114211, 0, 0.66842103, 0)
 				TextLabel.Size = UDim2.new(0.652631581, 0, 0.105263159, 0)
 				TextLabel.Font = Enum.Font.Unknown
-				TextLabel.Text = "Arcadia INF YIELD I V1"
+				TextLabel.Text = "Evon INF YIELD I V1"
 				TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 				TextLabel.TextScaled = true
 				TextLabel.TextSize = 20.000
@@ -3722,13 +3569,13 @@ local script = G2L["4"];
 
 
 
-end;
-task.spawn(C_4);
--- StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ColorWheel_LocalScript
-local function C_7b()
-	local script = G2L["7b"];
+end
+task.spawn(SCRIPT_4)
+-- // StarterGui.Arcadia.MAIN.frames.settings.color.Frame.ColorWheel_LocalScript \\ --
+local function SCRIPT_7b()
+	local script = UI["7b"]
 
-end;
-task.spawn(C_7b);
+end
+task.spawn(SCRIPT_7b)
 
-return G2L["1"], require;
+return UI["1"], require;
