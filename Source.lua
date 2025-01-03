@@ -13,11 +13,9 @@ UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
 -- // StarterGui.Arcadia.open \\ --
 UI["2"] = Instance.new("ImageButton", UI["1"])
 UI["2"]["BorderSizePixel"] = 0
-UI["2"]["ImageTransparency"] = 0
-UI["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31)
 UI["2"]["Image"] = [[rbxassetid://86615245575481]]
 UI["2"]["Size"] = UDim2.new(0, 28, 0, 27)
-UI["2"]["BackgroundTransparency"] = 0.99
 UI["2"]["Name"] = [[open]]
 UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["2"]["Position"] = UDim2.new(0.51234, 0, 0.05628, 0)
@@ -254,7 +252,6 @@ UI["21"]["BackgroundTransparency"] = 1
 
 -- // StarterGui.Arcadia.MAIN.frames.executor.Executor.txtbox.EditorFrame.Source \\ --
 UI["22"] = Instance.new("TextBox", UI["21"])
-UI["22"]["CursorPosition"] = -1
 UI["22"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
 UI["22"]["PlaceholderColor3"] = Color3.fromRGB(205, 205, 205)
 UI["22"]["ZIndex"] = 3
