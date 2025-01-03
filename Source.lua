@@ -13,15 +13,14 @@ UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
 -- // StarterGui.Arcadia.open \\ --
 UI["2"] = Instance.new("ImageButton", UI["1"])
 UI["2"]["BorderSizePixel"] = 0
-UI["2"]["ImageTransparency"] = 1
+UI["2"]["ImageTransparency"] = 0
 UI["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
-UI["2"]["Image"] = [[rbxassetid://15204016915]]
+UI["2"]["Image"] = [[rbxassetid://86615245575481]]
 UI["2"]["Size"] = UDim2.new(0, 28, 0, 27)
 UI["2"]["BackgroundTransparency"] = 0.99
 UI["2"]["Name"] = [[open]]
 UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
 UI["2"]["Position"] = UDim2.new(0.51234, 0, 0.05628, 0)
-UI["2"]["Visible"] = true
 
 -- // StarterGui.Arcadia.open.UICorner \\ --
 UI["3"] = Instance.new("UICorner", UI["2"])
@@ -2872,17 +2871,19 @@ local script = UI["4"]
 		game:GetService("TweenService"):Create(Sbutton,TweenInfo.new(1),{TextColor3=Color3.fromRGB(132, 131, 132)}):Play()
 		game:GetService("TweenService"):Create(setbutton,TweenInfo.new(1),{TextColor3=Color3.fromRGB(255, 255, 255)}):Play()
 	end)
-
-    close.MouseButton1Click:Connect(function()
+	close.MouseButton1Click:Connect(function()
 		game:GetService("TweenService"):Create(main,TweenInfo.new(1),{Position=UDim2.new(0.248, 0,5, 0)}):Play()
 		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
 	end)
-
+	open.MouseButton1Click:Connect(function()
+		game:GetService("TweenService"):Create(main,TweenInfo.new(0.5),{Position=UDim2.new(0.248, 0,0.25, 0)}):Play()
+		game:GetService("TweenService"):Create(open,TweenInfo.new(0.5),{ImageTransparency=1}):Play()
+	end)
 	--
 	--
 	--settings Scripts
-	--game:GetService("TweenService"):Create(main,TweenInfo.new(1),{Position=UDim2.new(0.248, 0,5, 0)}):Play()
-	--game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=1}):Play()
+	game:GetService("TweenService"):Create(main,TweenInfo.new(1),{Position=UDim2.new(0.248, 0,5, 0)}):Play()
+	game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=1}):Play()
 	--
 	
 	local textbox2 = script.Parent.MAIN.frames.executor.Executor.txtbox.EditorFrame.Source.Source2
@@ -3413,14 +3414,14 @@ local script = UI["4"]
 
 	--executor load
 	exeframe.Executor.Execute.MouseButton1Click:Connect(function()
-		dtc.schedule(exeframe.Executor.txtbox.EditorFrame.Source.Text)
+		loadstring(exeframe.txtbox.TextBox.Text)()
 	end)
 	--clear
 	exeframe.Executor.Clear.MouseButton1Click:Connect(function()
-		exeframe.Executor.txtbox.EditorFrame.Source.Text = ""
+		exeframe.txtbox.TextBox.Text = ""
 	end)
 	exeframe.Executor.Copy.MouseButton1Click:Connect(function()
-		setclipboard(exeframe.Executor.txtbox.EditorFrame.Source.Text)
+		setclipboard(exeframe.txtbox.TextBox.Text)
 	end)
 
 	--search script
@@ -3443,7 +3444,7 @@ local script = UI["4"]
 		scname.Text = scriptname
 
 		execute.MouseButton1Click:Connect(function()
-			dtc.schedule(source)
+			loadstring(source)()
 		end)
 	end
 
