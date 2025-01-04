@@ -1,5 +1,6 @@
 -- // GUI TO LUA \\ --
 
+print("Hello from anya")
 -- // INSTANCES: 153 | SCRIPTS: 2 | MODULES: 6 \\ --
 
 local UI = {}
