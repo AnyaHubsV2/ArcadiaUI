@@ -3413,7 +3413,7 @@ local script = UI["4"]
 
 	--executor load
 	exeframe.Executor.Execute.MouseButton1Click:Connect(function()
-		loadstring(exeframe.txtbox.TextBox.Text)()
+		loadstring(exeframe.Executor.txtbox.EditorFrame.Source.Text)()
 	end)
 	--clear
 	exeframe.Executor.Clear.MouseButton1Click:Connect(function()
